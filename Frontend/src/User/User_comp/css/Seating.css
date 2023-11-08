@@ -1,0 +1,50 @@
+.Seating_main
+{
+    display: flex;
+    height: 200px;
+    background:transparent;
+    margin-top: 30px;
+    flex: 1;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+.Seating_name
+{
+background: transparent;
+width: 25%;
+}
+.Seating_screen {
+    font-weight: 300;
+    font-size: 0.8em;
+  }
+  
+.Seating_time
+{
+    background: transparent;
+    width: 75%;
+    display: flex;
+}
+.Seating_span
+{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 65px 60px;
+    display: flex;
+    font-family: 'Poppins';
+}
+.Seating_a{
+    background: #FFFF;
+    width: 200px;
+    height: 75px;
+    margin: 50px 25px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 12px;
+    display: flex;
+}
+.a_span
+{
+    margin: 15px 75px;
+    font-size: 25px;
+    font-weight: bold;
+}

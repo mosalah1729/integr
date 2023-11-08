@@ -1,0 +1,12 @@
+
+asgiref
+Django
+djangorestframework
+djongo
+pymongo
+pytz
+sqlparse
+typing-extensions
+
+ 
+

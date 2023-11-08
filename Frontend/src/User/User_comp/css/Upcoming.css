@@ -1,0 +1,28 @@
+.card {
+  background: rgba(242, 242, 242, 1);
+  height: 400px;
+  width: 240px;
+  margin-top: 25px;
+  margin-left: 58px;
+  border-radius: 20px;
+  }
+  .container {
+    background:transparent;
+    height: 40px;
+  }
+  .book
+{
+  width: 230px;
+  margin-top: 25px;
+  background: transparent;
+  border-style: none;
+  color: #FF640D;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+}
+a{
+  text-decoration: none;
+}
