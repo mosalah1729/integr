@@ -174,7 +174,7 @@ USE_TZ = False
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'Frontend/build/static'),
+    os.path.join(BASE_DIR, 'staticfiles/build/static'),
 ]
 
 # No need to specify STATIC_ROOT for Vercel deployment
@@ -185,7 +185,7 @@ STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR,'Frontend/build/static'),
     
 # ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'Frontend')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
 
 # given in tutorial
 #    STATICFILES_DIRS = [BASE_DIR/'static',]
