@@ -25,10 +25,10 @@ from datetime import datetime, timedelta
 from pymongo import MongoClient
 from articles.models import UserReview
 from articles.models import Booking
-import nltk
-nltk.download('vader_lexicon')
+# import nltk
+# nltk.download('vader_lexicon')
 
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+# from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 from django.conf import settings
 import razorpay
