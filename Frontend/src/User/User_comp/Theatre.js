@@ -55,7 +55,7 @@ function Theatre(props) {
   const movieGenre = location.state?.movGenre;
   const movieLang = location.state?.movLang;
   const userName = location.state?.userName;
-  // const movieLocation = location.state?.selectedOption;
+  const movieLoc = location.state?.selectedOption;
 
 
   
@@ -67,7 +67,7 @@ function Theatre(props) {
 
   const [dates, setDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState('');
-  const movieLoc="mananthavady"
+  // const movieLoc="mananthavady"
   
   useEffect(() => {
     const today = new Date();
@@ -167,7 +167,7 @@ function Theatre(props) {
     <div className='thea_seat'>
     {selectedDate}
 
-    <Seating movieName={movieName} selectedDate={selectedDate}  movieLoc={movieLoc}movieLang={movieLang} userName={userName} />
+    <Seating movieName={movieName} selectedDate={selectedDate}  movieLoc={movieLoc} movieLang={movieLang} userName={userName} />
 
     </div>
     </div>

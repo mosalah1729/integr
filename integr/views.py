@@ -169,26 +169,9 @@ def signin(request):
 def posternow(request):
     my_text='Hello'
     mov=Movienow.objects.all()
-    # mov = Movie.objects.filter(name='avatar').values('name', 'genre','desc','image').first()
-    # # mov=Movie.objects.filter(name='jaws').first()
-    # if mov is not None:
-    #     # my_t = mov.genre
-    #     # print(mov.genre)
-    #     my_t = mov['genre']
-    #     print(mov['genre'])
-    # else:
-    #     my_t = "Unknown"
-    #     print("none")
-    # my_text = my_text + " " + my_t
-    # print(my_text)
-    # data = {
-    #     obj1: {'name': mov.name,'age': mov.genre,'email': mov.desc,'image':mov.image.url if mov.image else None,'image': mov.image,},
-    #     obj1: { name: 'John', age: 25 },
-    # }
+    
     data = {
-    #    'obj1': { 'name': 'John', 'age': 25 },
-    #    'obj2': { 'name': 'Jane', 'age': 30 },
-    #    'obj3': { 'name': 'Jack', 'age': 35 },
+   
         }
     i=0
     for movie in mov:
@@ -197,13 +180,13 @@ def posternow(request):
      image=movie.image.url     
      desc=movie.desc
      print(movie.name)
-    #  print(movie.genre)
+  
      data[f"obj{i}"] = {"name": name, "genre": genre, "image": image, "desc": desc}
      i=i+1
 
     
     return JsonResponse({'movie': data})
-    # return JsonResponse({'text': mov.genre})
+    
        
 def posterup(request):
     my_text='Hello'

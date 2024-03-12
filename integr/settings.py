@@ -12,6 +12,25 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
+# Add this at the end of your settings.py
+if os.environ.get('DJANGO_ENV') == 'development':
+    CORS_ORIGIN_WHITELIST = [
+        'http://localhost:3000',  # React development server
+    ]
+
+    # Django development server proxy configuration
+    USE_X_FORWARDED_HOST = True
+    SECURE_SSL_REDIRECT = False
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+
+
+
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -158,7 +177,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'Frontend/build/static'),
     
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
+STATIC_ROOT = os.path.join(BASE_DIR, 'Frontend')
 # MEDIA_URL ='/media/'
 # MEDIA_ROOT=os.path.join(BASE_DIR,'pic')
 MEDIA_URL = '/media/'

@@ -58,6 +58,8 @@ const { selectedDate } = props;
 const { movieLoc } = props;
 const { userName } = props;
 
+
+
 const [theaterShowtimes, setTheaterShowtimes] = useState([]);
 const [capacity, setCapacity] = useState([]);
 

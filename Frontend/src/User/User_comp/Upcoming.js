@@ -403,7 +403,7 @@ useEffect(() => {
       key={mov.key}
       >
         <div className='img_movie'>
-          <Link to='/Ratings' state={ {movieName: mov.name ,movieDesc: mov.desc ,movieGenre: mov.genre ,movieImage: mov.image ,movieDir: mov.dir,movieLang:mov.lang  }}>
+          <Link to='/Ratings' state={ {movieName: mov.name ,movieDesc: mov.desc ,movieGenre: mov.genre ,movieImage: mov.image ,movieDir: mov.dir,movieLang:mov.lang ,movieLoc:movieLoc }}>
           <img src={posters[mov.name]} alt="Movie Poster" style={{ display: 'flex', height: '300px', width: '240px', borderRadius: '20px 20px 0px 0px' }} />
           </Link>
         </div>
@@ -413,7 +413,7 @@ useEffect(() => {
           {/* <Link to='/Theatredetails'> selectedOption: selectedOption, */}
           <Link
               to="/Theatredetails"
-                state={{  movName : mov.name,movGenre: mov.genre,movLang: mov.lang,}}>
+                state={{  movName : mov.name,movGenre: mov.genre,movLang: mov.lang,movieLoc:movieLoc}}>
           <button className='book'>Book Ticket</button></Link>
         </div>
         {/* <><span>No Image  </span><div>3 {mov.image} </div></> */}

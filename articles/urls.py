@@ -34,7 +34,7 @@ urlpatterns = [
     path('payment/', views.payment, name='payment'),
     path('addbooking/', views.addbooking, name='addbooking'),
     path('getseats/', views.getseats, name='getseats'),
-    path('predict/', views.predict, name='predict'),
+    # path('predict/', views.predict, name='predict'),
     
     # path('', ReactAppView.as_view(), name='templates'),
     # path('', TemplateView.as_view(template_name='templates/index.html')),
