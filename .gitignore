@@ -1,0 +1,34 @@
+ 
+# Django related files
+*.pyc                # Python compiled files
+*.pyo                # Python optimized code files
+__pycache__/         # Python cache directory
+*.sqlite3            # SQLite database file
+
+# Django generated files
+*.log                # Django log files
+*.pot                # Django translation files
+*.pyc                # Python compiled files
+db.sqlite3           # SQLite database file
+/staticfiles/        # Django collectstatic directory
+
+# React related files
+node_modules/        # Node.js modules directory
+/build/              # React build directory
+# Webpack and Babel generated files
+/dist/               # Webpack output directory
+/node_modules/       # Node.js modules directory (including Babel plugins and presets)
+
+
+# Environment variables
+.env                 # Local environment variables file
+
+# Editor specific files
+.vscode/             # Visual Studio Code directory
+.idea/               # PyCharm directory
+
+# Others
+*.DS_Store           # macOS system file
+*.swp                # Vim swap file
+*.swo                # Vim session file
+*.log                # Log files
