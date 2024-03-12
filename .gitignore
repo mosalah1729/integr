@@ -12,6 +12,7 @@ __pycache__/         # Python cache directory
 db.sqlite3           # SQLite database file
 /staticfiles/        # Django collectstatic directory
 
+
 # React related files
 node_modules/        # Node.js modules directory
 /build/              # React build directory
