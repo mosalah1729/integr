@@ -36,7 +36,7 @@ function Banner(props) {
       </Link>
       <div className='select'>
         <button className='buttons' onClick={handleNowShowingClick}>NOWww SHOWING</button>
-        <button className='buttons' onClick={handleUpcomingClick}>COMING SOON</button>
+        <button className='buttons' onClick={handleUpcomingClick}>COMnnING SOON</button>
         <label htmlFor="simple-select-box"></label>
         <select id="simple-select-box" value={selectedOption} onChange={handleSelectChange} style={{ marginLeft: '19cm' }}>
           <option value="">Location</option>
