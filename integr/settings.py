@@ -185,7 +185,7 @@ STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR,'Frontend/build/static'),
     
 # ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
+STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
 
 # given in tutorial
 #    STATICFILES_DIRS = [BASE_DIR/'static',]
