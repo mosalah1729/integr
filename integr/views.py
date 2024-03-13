@@ -233,17 +233,3 @@ def posterup(request):
 
 
 
-
-# def article_list(request):
-#     articles = Article.objects.all()
-#     data = {
-#         'articles': [
-#             {
-#                 'title': article.title,
-#                 'author': article.author,
-#                 'content': article.content,
-#             }
-#             for article in articles
-#         ]
-#     }
-#     return JsonResponse(data)
