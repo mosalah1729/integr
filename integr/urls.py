@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index ,name='index'),
     # path('articles/',views.my_view ,name='articles'),
-    path('', TemplateView.as_view(template_name='index.html')),
+    # path('', TemplateView.as_view(template_name='index.html')),
     path('get_text/', views.gettext, name='get_text'),
     path('my_view/', views.hello, name='my_view'),
     path('posterup/', views.posterup, name='poster'),
