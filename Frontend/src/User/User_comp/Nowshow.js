@@ -70,8 +70,11 @@ const [selectedOption, setSelectedOption] = useState('');
   useEffect(() => {
     fetch('/articles/my_view/')
       .then(response => response.json())
-      .then(data => setText(data.text));
-  }, []);
+      .then(data => {
+          console.log(data.text); // Print the value in the console
+          setText(data.text);
+      });
+}, []);
 
   // const [def, setTxt] = useState('');
   
