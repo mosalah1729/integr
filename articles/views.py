@@ -377,7 +377,8 @@ def my_view(request):
 
 def posternow(request):
     print(request.body)  # Add this line to check the value of request.body
-    location = json.loads(request.body)['movieLoc']
+    data = json.loads(request.body)['movieLoc']
+    # location = json.loads(request.body)['movieLoc']
     # print(location)
     # theatres = Theatre.objects.filter(location=location)
     # print(theatres)
@@ -398,7 +399,8 @@ def posternow(request):
     #     }
     #     print(movie.name)
     # return JsonResponse({'movie': data})
-    return JsonResponse({'movie location  receive check': location})
+    data=data+" aanneey"
+    return JsonResponse({'movie location  receive check': data})
 
 
 def posterup(request):
