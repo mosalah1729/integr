@@ -364,7 +364,7 @@ def showtime(request):
 
 
 def my_view(request):
-    my_text='Hello article myvieew'
+    my_text='Hello article maatiya myvieew'
     # mum=Movie.objects.filter(name='jaws').first()
     # if mum is not None:
     #     my_t = mum.genre
@@ -378,26 +378,27 @@ def my_view(request):
 def posternow(request):
     print(request.body)  # Add this line to check the value of request.body
     location = json.loads(request.body)['movieLoc']
-    print(location)
-    theatres = Theatre.objects.filter(location=location)
-    print(theatres)
-    # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
-    nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='nowshowing').distinct()
-    print(nowshowing_movies)
+    # print(location)
+    # theatres = Theatre.objects.filter(location=location)
+    # print(theatres)
+    # # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
+    # nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='nowshowing').distinct()
+    # print(nowshowing_movies)
     
 
-    data = {}
-    for i, movie in enumerate(nowshowing_movies):
-        data[f"obj{i}"] = {
-            "name": movie.name,
-            "genre": movie.genre,
-            "image": movie.image.url if movie.image else None,
-            "desc": movie.description,
-            "lang":movie.language,
-            "dir":movie.director,
-        }
-        print(movie.name)
-    return JsonResponse({'movie': data})
+    # data = {}
+    # for i, movie in enumerate(nowshowing_movies):
+    #     data[f"obj{i}"] = {
+    #         "name": movie.name,
+    #         "genre": movie.genre,
+    #         "image": movie.image.url if movie.image else None,
+    #         "desc": movie.description,
+    #         "lang":movie.language,
+    #         "dir":movie.director,
+    #     }
+    #     print(movie.name)
+    # return JsonResponse({'movie': data})
+    return JsonResponse({'movie location  receive check': location})
 
 
 def posterup(request):
