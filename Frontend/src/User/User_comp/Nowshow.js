@@ -144,7 +144,8 @@ useEffect(() => {
     }),
   })
     .then((response) => response.json())
-    .then((data) => {setMovies(data.movie)
+    .then((data) => {setMovies(data)
+      //important .then((data) => {setMovies(data.movie)
       console.log('Success:', data);
       // setTheaterShowtimes(data.theater_showtimes);
     })
@@ -157,7 +158,7 @@ useEffect(() => {
     
 
 
-   console.log(movie)
+   console.log('Sanam kitti movie:',movie)
   
     const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
 
