@@ -14,10 +14,24 @@ import os
 
 
 # Add this at the end of your settings.py
+
+
+# Determine the deployment URL dynamically
 if os.environ.get('DJANGO_ENV') == 'development':
-    CORS_ORIGIN_WHITELIST = [
-        'http://localhost:3000',  # React development server
-    ]
+    # In development mode, use the localhost URL
+    DEPLOYMENT_URL = 'http://localhost:3000'
+else:
+    # In production, use the Vercel deployment URL
+    request_host = os.environ.get('HTTP_HOST')
+    DEPLOYMENT_URL = f"https://{request_host}" if request_host else None
+
+# Set up CORS whitelist based on the determined deployment URL
+if DEPLOYMENT_URL:
+    CORS_ORIGIN_WHITELIST = [DEPLOYMENT_URL]
+else:
+    # Handle the case when the deployment URL is not available
+    CORS_ORIGIN_WHITELIST = []
+
 
     # Django development server proxy configuration
     USE_X_FORWARDED_HOST = True
