@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'articles',
     'integr',
     'djongo',
-    # 'corsheaders',
+    'corsheaders',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -73,16 +73,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # CORS_ALLOWED_ORIGINS = [
 #        'http://127.0.0.1:8000',  # Add your frontend origin here
 #    ]
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:8000',
+    'http://127.0.0.1:8000','',
 ]
 
 ROOT_URLCONF = 'integr.urls'
@@ -218,3 +218,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 RAZORPAY_KEY_ID = 'rzp_test_eFtaril9zvyOGW'
 RAZORPAY_KEY_SECRET = '39c8KbriHHxYzKq87WDNC8bH'
+
+
+# Add this at the end of your settings.py
+
+if os.environ.get('DJANGO_ENV') == 'production':  # Assuming 'production' is your production environment
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
