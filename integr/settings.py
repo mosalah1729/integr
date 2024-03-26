@@ -96,7 +96,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 #        'http://127.0.0.1:8000',  # Add your frontend origin here
 #    ]
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1:8000','',
+    'http://127.0.0.1:8000',
+    'https://integr-q2q52dv2j-mosalah1729s-projects.vercel.app',
 ]
 
 ROOT_URLCONF = 'integr.urls'
