@@ -95,13 +95,27 @@ WSGI_APPLICATION = 'integr.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME':'integr',
+        
+# }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME':'integr',
-        
+        'NAME': 'integr',  # Your database name
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://mohammedsalah2048:salah@integr.mgkuglg.mongodb.net/?retryWrites=true&w=majority&appName=integr',
+            'ssl': True,
+            'authMechanism': 'SCRAM-SHA-1',
+        }
+    }
 }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
