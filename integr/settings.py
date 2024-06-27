@@ -135,15 +135,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'integr',  # Your database name
-        'ENFORCE_SCHEMA': False,  # Set this to False if you don't have a schema defined
+        'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'integr.mgkuglg.mongodb.net',  # MongoDB Atlas host
-            'port': 27017,  # Default MongoDB port
-            'username': 'mohammedsalah2048',  # MongoDB Atlas username
-            'password': 'salah',  # MongoDB Atlas password
-            'authSource': 'admin',  # Or the name of the authentication database
-            'authMechanism': 'SCRAM-SHA-1',  # Authentication mechanism (optional)
-            'ssl': True,  # Enable SSL connection
+            'host': 'mongodb+srv://mohammedsalah2048:salah@integr.mgkuglg.mongodb.net/?retryWrites=true&w=majority&appName=integr',
+            'ssl': True,
+            'authMechanism': 'SCRAM-SHA-1',
         }
     }
 }
