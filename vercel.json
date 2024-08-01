@@ -4,7 +4,7 @@
     {
       "src": "integr/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "500mb", "runtime": "python3.9" }
+      "config": { "maxLambdaSize": "50mb", "runtime": "python3.9" }
     }
   ],
   "routes": [
@@ -14,4 +14,3 @@
     }
   ]
 }
-  
