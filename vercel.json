@@ -7,23 +7,21 @@
       "config": { "maxLambdaSize": "50mb", "runtime": "python3.9" }
     },
     {
-      "src": "frontend/package.json",
+      "src": "build_files.sh",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "static"
+      }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "integr/static/$1"
-    },
-    {
-      "src": "/api/(.*)",
-      "dest": "integr/wsgi.py"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/build/$1"
+      "dest": "integr/wsgi.py"
     }
   ]
 }
