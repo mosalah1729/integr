@@ -45,7 +45,7 @@ def gettext(request):
     # return JsonResponse({'text': my_text})
 
 def hello(request):
-    my_text='Hello  saadha'
+    my_text='Hello  sadha'
     # mov=Movie.objects.filter(name='jaws').first()
     print(my_text)
     # if mov is not None:
