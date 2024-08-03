@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+import environ
 
 # Add this at the end of your settings.py
 
@@ -131,17 +131,13 @@ WSGI_APPLICATION = 'integr.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+
+env = environ.Env()
+environ.Env.read_env()
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'integr',  # Your database name
-        'ENFORCE_SCHEMA': False,
-        'CLIENT': {
-            'host': 'mongodb+srv://mohammedsalah2048:salah@integr.mgkuglg.mongodb.net/?retryWrites=true&w=majority&appName=integr',
-            'ssl': True,
-            'authMechanism': 'SCRAM-SHA-1',
-        }
-    }
+    'default': env.db(),
 }
 
 
