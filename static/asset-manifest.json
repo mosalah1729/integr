@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "http://127.0.0.1:8000/static/css/main.001111c2.css",
-    "main.js": "http://127.0.0.1:8000/static/js/main.b4ed7228.js",
+    "main.js": "http://127.0.0.1:8000/static/js/main.8245cbf7.js",
     "static/js/651.c91c5979.chunk.js": "http://127.0.0.1:8000/static/js/651.c91c5979.chunk.js",
     "static/media/new-batman-poster-1634314278488_aab8.jpg": "http://127.0.0.1:8000/static/media/new-batman-poster-1634314278488_aab8.e3cabfeb878ee0f3ad39.jpg",
     "static/media/spiderverse.jpg": "http://127.0.0.1:8000/static/media/spiderverse.30c4295ba9c2aed364e5.jpg",
@@ -18,11 +18,11 @@
     "static/media/jw4.jpeg": "http://127.0.0.1:8000/static/media/jw4.b9a07d3419c10c568f14.jpeg",
     "index.html": "http://127.0.0.1:8000/index.html",
     "main.001111c2.css.map": "http://127.0.0.1:8000/static/css/main.001111c2.css.map",
-    "main.b4ed7228.js.map": "http://127.0.0.1:8000/static/js/main.b4ed7228.js.map",
+    "main.8245cbf7.js.map": "http://127.0.0.1:8000/static/js/main.8245cbf7.js.map",
     "651.c91c5979.chunk.js.map": "http://127.0.0.1:8000/static/js/651.c91c5979.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.001111c2.css",
-    "static/js/main.b4ed7228.js"
+    "static/js/main.8245cbf7.js"
   ]
 }

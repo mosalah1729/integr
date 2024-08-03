@@ -21,21 +21,7 @@ function Upcoming(props) {
   const { movieLoc } = props;
   const { userName } = props;
   const [movies, setMovies] = useState([]);
-  const [response, setResponse] = useState('');
-
-  useEffect(() => {
-    // Function to fetch data from the Django backend
-    const fetchData = async () => {
-      try {
-        const result = await axios.get('/articles/my_view/'); // Replace with your Django server URL
-        setResponse(result.data.text);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+ 
 
   useEffect(() => {
     const csrftoken = getCookie('csrftoken');
