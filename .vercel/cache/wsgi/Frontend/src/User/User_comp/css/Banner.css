@@ -1,0 +1,72 @@
+.Banner
+{
+    height:900px;
+    width: 100%;
+    background: rgba(242, 242, 242, 1);
+   /* background: linear-gradient(#e8e5e5,#e3dbdb,#E2E2E2);*/
+    display: flex;
+}
+.select
+{
+    position: absolute;
+    width: 350px;
+    height: 65px;
+    background: rgb(247, 228, 221);
+    margin-left: 610px;
+    margin-top: 96x;
+    margin-top: 160px;
+    border-radius: 20px;
+}
+.lang
+{    
+    position: absolute;
+    background: rgb(247, 228, 221);
+    height: 550px;
+    width: 500px;
+    margin-left: 30px;
+    margin-top: 250px;
+    border-radius: 63px;
+    /* display: flex; */
+    justify-content: center;
+    /* max-height: 200px; */
+    /* max-width: 200px; */
+    overflow: auto;
+}
+.lang {
+    display: block;
+    overflow-y: scroll;
+    /* max-height: 300px; adjust the max-height to your desired value */
+  }
+  
+.lang label {
+    display: block;
+  }
+  
+.movies
+{
+    position: absolute;
+    width: 950px;
+    height: 550px;
+    background: #F3E1DA;
+    border-radius: 63px;
+    margin-left: 560px;
+    margin-top: 250px;
+    overflow-y: scroll;
+}
+.buttons
+{
+    height: 50px;
+    width: 160px;
+    background: white;
+    border-radius: 15px;
+    margin-left: 11px;
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    border-style: none;
+    cursor: pointer;
+}
+.lang label {
+    display: block;
+  }
+  

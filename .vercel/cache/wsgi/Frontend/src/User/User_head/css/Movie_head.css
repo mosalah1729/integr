@@ -1,0 +1,19 @@
+.Moviehead_main
+{
+    height: 135px;
+    width: 100%;
+    background: #FF640D;
+    display: flex;
+   flex-direction: column;
+}
+.Moviehead_h
+{   
+    font-size: 40px;
+    padding: 5px 100px;
+}
+.Moviehead_p
+{
+    margin-top: -20px;
+    margin-left: 100px;
+    font-size: 20px;
+}
