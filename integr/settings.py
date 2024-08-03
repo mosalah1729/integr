@@ -137,7 +137,14 @@ env = environ.Env()
 environ.Env.read_env()
 
 DATABASES = {
-    'default': env.db(),
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': env('DB_NAME', default='integr'),  # Replace 'your_db_name' with your actual database name
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': env('MONGODB_URI')
+        }
+    }
 }
 
 
