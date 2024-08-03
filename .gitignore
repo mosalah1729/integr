@@ -21,8 +21,7 @@ node_modules/        # Node.js modules directory
 /node_modules/       # Node.js modules directory (including Babel plugins and presets)
 
 
-# Environment variables
-.env                 # Local environment variables file
+
 
 # Editor specific files
 .vscode/             # Visual Studio Code directory
