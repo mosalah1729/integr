@@ -6,8 +6,7 @@ import environ  # Make sure you import the environ package
 
 def main():
     # Initialize environment variables
-    env = environ.Env()
-    environ.Env.read_env()
+    
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'integr.settings')
     try:
