@@ -1,9 +1,9 @@
 
-# Print the current working directory
-pwd
+# # Print the current working directory
+# pwd
 
-# List files in the current directory
-ls -la
+# # List files in the current directory
+# ls -la
 
 # Ensure environment variables are sourced
 source ./.env
