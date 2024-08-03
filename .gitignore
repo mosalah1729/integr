@@ -32,3 +32,4 @@ node_modules/        # Node.js modules directory
 *.swp                # Vim swap file
 *.swo                # Vim session file
 *.log                # Log files
+.vercel

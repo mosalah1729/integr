@@ -60,10 +60,7 @@ function Upcoming(props) {
 
   return (
     <div>
-      <div>
-      <h1>Backend Response:</h1>
-      <p>{response}</p>
-      </div>
+      
 
       {movies.map((mov) => (
         <div key={mov.key}>
