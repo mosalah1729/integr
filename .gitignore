@@ -15,7 +15,7 @@ db.sqlite3           # SQLite database file
 
 # React related files
 node_modules/        # Node.js modules directory
-/build/              # React build directory
+   # React build directory
 # Webpack and Babel generated files
 /dist/               # Webpack output directory
 /node_modules/       # Node.js modules directory (including Babel plugins and presets)
