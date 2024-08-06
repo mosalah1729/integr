@@ -13,7 +13,7 @@ static/
 node_modules/
 
 # Ignore build artifacts
-build/
+
 dist/
 
 # Ignore documentation and other non-essential files
