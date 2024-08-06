@@ -10,7 +10,7 @@ __pycache__/         # Python cache directory
 *.pot                # Django translation files
 *.pyc                # Python compiled files
 db.sqlite3           # SQLite database file
-/staticfiles/        # Django collectstatic directory
+
 
 
 # React related files
