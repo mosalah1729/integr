@@ -1,0 +1,20 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore development tools and configurations
+.vscode/
+*.log
+
+# Ignore media and static files if not needed in deployment
+media/
+
+
+# Ignore Node.js dependencies if not used in deployment
+node_modules/
+
+# Ignore build artifacts
+
+dist/
+
+# Ignore documentation and other non-essential files
+*.md
