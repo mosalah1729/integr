@@ -18,4 +18,4 @@ dist/
 
 # Ignore documentation and other non-essential files
 *.md
-*.env
+
