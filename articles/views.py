@@ -399,7 +399,13 @@ def posternow(request):
     #     }
     #     print(movie.name)
     # return JsonResponse({'movie': data})
-    data=data+" aanneey"
+    data = [
+    {"key": 1, "name": "Inception"},
+    {"key": 2, "name": "The Matrix"},
+    {"key": 3, "name": "The Godfather"}
+]
+
+    # data=data+" aanneey"
     return JsonResponse({'movie location  receive check': data})
 
 

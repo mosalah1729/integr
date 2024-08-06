@@ -7,7 +7,7 @@
 
 # Ignore media and static files if not needed in deployment
 media/
-static/
+
 
 # Ignore Node.js dependencies if not used in deployment
 node_modules/
