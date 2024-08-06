@@ -1,4 +1,3 @@
- 
 # Django related files
 *.pyc                # Python compiled files
 *.pyo                # Python optimized code files
@@ -15,7 +14,7 @@ db.sqlite3           # SQLite database file
 
 # React related files
 node_modules/        # Node.js modules directory
-   # React build directory
+/build/              # React build directory
 # Webpack and Babel generated files
 /dist/               # Webpack output directory
 /node_modules/       # Node.js modules directory (including Babel plugins and presets)
@@ -32,4 +31,3 @@ node_modules/        # Node.js modules directory
 *.swp                # Vim swap file
 *.swo                # Vim session file
 *.log                # Log files
-.vercel
