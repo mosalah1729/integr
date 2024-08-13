@@ -13,6 +13,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import environ
 
+import os
+
+# Retrieve allowed origins from environment variable
+ALLOWED_ORIGINS = os.getenv('CSRF_ALLOWED_ORIGINS', '')
+
+if ALLOWED_ORIGINS:
+    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in ALLOWED_ORIGINS.split(',') if origin.strip()]
+else:
+    CSRF_TRUSTED_ORIGINS = []
 
 
 
