@@ -12,8 +12,30 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import environ
+import re
 
+# Regular expression to match Vercel subdomains
+VERCEL_SUBDOMAIN_REGEX = re.compile(r'https://.*\.vercel\.app')
+
+CSRF_TRUSTED_ORIGINS = []
+
+def add_trusted_origin(origin):
+    if VERCEL_SUBDOMAIN_REGEX.match(origin):
+        CSRF_TRUSTED_ORIGINS.append(origin)
 # Add this at the end of your settings.py
+
+import os
+
+# Retrieve allowed origins from environment variable
+ALLOWED_ORIGINS = os.getenv('CSRF_ALLOWED_ORIGINS', '')
+
+if ALLOWED_ORIGINS:
+    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in ALLOWED_ORIGINS.split(',') if origin.strip()]
+else:
+    CSRF_TRUSTED_ORIGINS = []
+
+
+
 
 
 # Determine the deployment URL dynamically
@@ -36,7 +58,7 @@ else:
     # Django development server proxy configuration
     USE_X_FORWARDED_HOST = True
     SECURE_SSL_REDIRECT = False
-    CSRF_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = False
 
 
