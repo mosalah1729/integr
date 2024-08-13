@@ -292,9 +292,12 @@ const [selectedOption, setSelectedOption] = useState('');
   useEffect(() => {
     fetch('/articles/my_view/')
       .then(response => response.json())
-      .then(data => setText(data.text));
+      .then(data => {
+        console.log(data); // Print the entire response data in the console
+        setText(data.text);
+      })
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
-
   // const [def, setTxt] = useState('');
   
   // useEffect(() => {
