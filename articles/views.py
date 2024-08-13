@@ -410,29 +410,30 @@ def posternow(request):
 
 
 def posterup(request):
-    print(request.body)  # Add this line to check the value of request.body
-    location = json.loads(request.body)['movieLoc']
-    print(location)
-    theatres = Theatre.objects.filter(location=location)
-    print(theatres)
-    # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
-    nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='upcoming').distinct()
-    print(nowshowing_movies)
+    # print(request.body)  # Add this line to check the value of request.body
+    # location = json.loads(request.body)['movieLoc']
+    # print(location)
+    # theatres = Theatre.objects.filter(location=location)
+    # print(theatres)
+    # # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
+    # nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='upcoming').distinct()
+    # print(nowshowing_movies)
     
 
-    data = {}
-    for i, movie in enumerate(nowshowing_movies):
-        data[f"obj{i}"] = {
-            "name": movie.name,
-            "genre": movie.genre,
-            "image": movie.image.url if movie.image else None,
-            "desc": movie.description,
-            "lang":movie.language,
-            "dir":movie.director,
-        }
-        print(movie.name)
-    return JsonResponse({'movie': data})
-
+    # data = {}
+    # for i, movie in enumerate(nowshowing_movies):
+    #     data[f"obj{i}"] = {
+    #         "name": movie.name,
+    #         "genre": movie.genre,
+    #         "image": movie.image.url if movie.image else None,
+    #         "desc": movie.description,
+    #         "lang":movie.language,
+    #         "dir":movie.director,
+    #     }
+    #     print(movie.name)
+    # return JsonResponse({'movie': data})
+    my_text='it reaches posterup '
+    return JsonResponse({'text': my_text})
 
 
 
