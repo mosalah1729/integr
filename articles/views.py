@@ -364,7 +364,7 @@ def showtime(request):
 
 
 def my_view(request):
-    my_text='Hello article maatiya myvieew'
+    my_text='it reaches backend '
     # mum=Movie.objects.filter(name='jaws').first()
     # if mum is not None:
     #     my_t = mum.genre

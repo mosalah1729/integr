@@ -396,9 +396,9 @@ useEffect(() => {
   return (
     <div style={{ display: 'flex' }}>
   
-  {/* <div>
-    {selectedOption && <div> {selectedOption}</div>}
-  </div> */}
+  <div>
+    {abc}
+  </div>
 
   {movies.map((mov) => (
     <div style={{display:'flex'}}>
