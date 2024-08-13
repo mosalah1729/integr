@@ -48,7 +48,7 @@ collection = db['articles_userreview']
 payclient = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
 
 
-@csrf_exempt
+# @csrf_exempt
 
 def predict(request):
     # amount = request.POST.get('amount')
