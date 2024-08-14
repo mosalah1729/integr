@@ -293,15 +293,15 @@ const [selectedOption, setSelectedOption] = useState('');
 
   const [abc, setText] = useState('');
   // for testsing app accessing
-  useEffect(() => {
-    fetch('/articles/my_view/')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); // Print the entire response data in the console
-        setText(data.text);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  // useEffect(() => {
+  //   fetch('/articles/my_view/')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data); // Print the entire response data in the console
+  //       setText(data.text);
+  //     })
+  //     .catch(error => console.error('Error fetching data:', error));
+  // }, []);
   // const [def, setTxt] = useState('');
   
   // useEffect(() => {
