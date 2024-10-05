@@ -1,7 +1,1 @@
-{
-    "search.useIgnoreFiles": false,
-    "files.exclude": {
-        "**/CVS": false,
-        "**/Thumbs.db": false
-    }
-}
+{}
