@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'integr.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'custom_db_wrapper.CustomDatabaseWrapper',
+        'ENGINE': 'djongo',
         'NAME': env('DB_NAME', default='integr'),
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
