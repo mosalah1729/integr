@@ -378,35 +378,31 @@ def my_view(request):
 def posternow(request):
     print(request.body)  # Add this line to check the value of request.body
     data = json.loads(request.body)['movieLoc']
-    # location = json.loads(request.body)['movieLoc']
-    # print(location)
-    # theatres = Theatre.objects.filter(location=location)
-    # print(theatres)
-    # # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
-    # nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='nowshowing').distinct()
-    # print(nowshowing_movies)
+    location = json.loads(request.body)['movieLoc']
+    print(location)
+    theatres = Theatre.objects.filter(location=location)
+    print(theatres)
+    # nowshowing_movies = Movie.objects.filter(theatres__in=theatres, availability='nowshowing').distinct()
+    nowshowing_movies = Movie.objects.filter(showtime__theatre__location=location, availability='nowshowing').distinct()
+    print(nowshowing_movies)
     
 
-    # data = {}
-    # for i, movie in enumerate(nowshowing_movies):
-    #     data[f"obj{i}"] = {
-    #         "name": movie.name,
-    #         "genre": movie.genre,
-    #         "image": movie.image.url if movie.image else None,
-    #         "desc": movie.description,
-    #         "lang":movie.language,
-    #         "dir":movie.director,
-    #     }
-    #     print(movie.name)
-    # return JsonResponse({'movie': data})
-    data = [
-    {"key": 1, "name": "Inception"},
-    {"key": 2, "name": "The Matrix"},
-    {"key": 3, "name": "The Godfather"}
-]
+    data = {}
+    for i, movie in enumerate(nowshowing_movies):
+        data[f"obj{i}"] = {
+            "name": movie.name,
+            "genre": movie.genre,
+            "image": movie.image.url if movie.image else None,
+            "desc": movie.description,
+            "lang":movie.language,
+            "dir":movie.director,
+        }
+        print(movie.name)
+    return JsonResponse({'movie': data})
+   
 
-    # data=data+" aanneey"
-    return JsonResponse({'movie location  receive check': data})
+    # # data=data+" aanneey"
+    # return JsonResponse({'movie location  receive check': data})
 
 
 def posterup(request):
