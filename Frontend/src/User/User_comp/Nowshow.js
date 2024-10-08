@@ -43,15 +43,7 @@ const [selectedOption, setSelectedOption] = useState('');
   console.log(movieLoc)
 
 
-  const [abc, setText] = useState('');
-  // for testsing app accessing
-  useEffect(() => {
-    fetch('/articles/my_view/')
-      .then(response => response.json())
-      .then(data => setText(data.text));
-  }, []);
-
-
+  
 
   
    
