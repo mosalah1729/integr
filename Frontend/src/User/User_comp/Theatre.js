@@ -48,19 +48,19 @@ function Theatre(props) {
   // const movieName = location.state?.movName;
   // const movieLocation = location.state?.selectedOption;
 
-  
+  const { movieLoc } = props;
  
   const location = useLocation();
   const movieName = location.state?.movName;
   const movieGenre = location.state?.movGenre;
   const movieLang = location.state?.movLang;
   const userName = location.state?.userName;
-  const movieLoc = location.state?.selectedOption;
+  // const movieLoc = location.state?.selectedOption;
 
 
   
   React.useEffect(() => {
-    console.log('location from', location);
+    console.log('location from', location,movieLoc);
     console.log('movie name:', movieName);
     console.log('movie genre:', movieGenre);
   }, [location, movieName]);
