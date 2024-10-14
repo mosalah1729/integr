@@ -7,11 +7,12 @@ import { useLocation } from 'react-router-dom';
 function Theatres() {
   const location = useLocation();
 const movieLoc = location.state?.movieLoc;
+const userName = location.state?.userName;
 console.log('theatress', movieLoc);
   return (
     <div>
       <Header/>
-      <Theatre movieLoc={movieLoc}/>
+      <Theatre movieLoc={movieLoc} userName={userName}/>
     </div>
   )
 }

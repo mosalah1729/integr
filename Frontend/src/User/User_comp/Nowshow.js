@@ -93,7 +93,7 @@ function Upcoming(props) {
               <h4><b>{mov.name}</b></h4>
               <Link
                 to="/Theatredetails"
-                state={{ movName: mov.name, movGenre: mov.genre, movLang: mov.lang, movieLoc: movieLoc }}
+                state={{ movName: mov.name, movGenre: mov.genre, movLang: mov.lang, movieLoc: movieLoc,userName:userName }}
               >
                 <button className='book'>Book Ticket</button>
               </Link>

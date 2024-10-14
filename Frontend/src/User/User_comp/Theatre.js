@@ -49,12 +49,13 @@ function Theatre(props) {
   // const movieLocation = location.state?.selectedOption;
 
   const { movieLoc } = props;
+  const { userName } = props;
  
   const location = useLocation();
   const movieName = location.state?.movName;
   const movieGenre = location.state?.movGenre;
   const movieLang = location.state?.movLang;
-  const userName = location.state?.userName;
+  // const userName = location.state?.userName;
   // const movieLoc = location.state?.selectedOption;
 
 
