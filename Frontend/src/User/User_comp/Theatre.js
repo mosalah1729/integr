@@ -63,6 +63,7 @@ function Theatre(props) {
     console.log('location from', location,movieLoc);
     console.log('movie name:', movieName);
     console.log('movie genre:', movieGenre);
+    console.log('userr:', userName);
   }, [location, movieName]);
 
   const [dates, setDates] = useState([]);
