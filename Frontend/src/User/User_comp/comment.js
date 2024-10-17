@@ -19,9 +19,32 @@ function getCookie(name) {
 function Comment(props) {
   const { movieName } = props;
   const { movie } = props;
+  // const [movie, setMovies] = useState([]);
   const [avg, setAvg] = useState([]);
 
- 
+  // useEffect(() => {
+  //   csrftoken = getCookie('csrftoken');
+
+  //   fetch('/articles/reviewsort/', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'X-CSRFToken': csrftoken,
+  //     },
+  //     body: JSON.stringify({
+  //       movieName: movieName,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMovies(data.review);
+  //       setAvg(data.average)
+  //       console.log('Success:', data);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error:', error);
+  //     });
+  // }, [movieName]);
    
   const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
 

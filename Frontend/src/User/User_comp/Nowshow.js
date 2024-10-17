@@ -1,47 +1,39 @@
-import './css/Upcoming.css'
-import spiderverse from '../../Image/spiderverse.jpg'
-import blade from '../../Image/blade.jpeg'
-import shazam from '../../Image/shazam.jpg'
-import johnwick from '../../Image/jw4.jpeg'
-import jaws from '../../Image/Jaws.jpeg'
-import christopher from '../../Image/chistopher.jpeg'
-import avatar from '../../Image/Avatar.jpg'
-import evildead from '../../Image/ed2.jpeg'
-import batman from '../../Image/new-batman-poster-1634314278488_aab8.jpg'
+import './css/Upcoming.css';
+import spiderverse from '../../Image/spiderverse.jpg';
+import blade from '../../Image/blade.jpeg';
+import shazam from '../../Image/shazam.jpg';
+import johnwick from '../../Image/jw4.jpeg';
+import christopher from '../../Image/chistopher.jpeg';
+import avatar from '../../Image/Avatar.jpg';
+import evildead from '../../Image/ed2.jpeg';
+import batman from '../../Image/new-batman-poster-1634314278488_aab8.jpg';
 
-import { Link } from 'react-router-dom'
-import Header from '../User_head/User_head'
-
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-function getCsrfToken() {
-  return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === name + '=') {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
 }
 
 function Upcoming(props) {
-  const { movieLoc: propMovieLoc } = props; // Extract movieLoc from props
-  const { userName } = props;
-
-  // Set default movie location to 'mananthavady' if propMovieLoc is null or undefined
-  const movieLoc = propMovieLoc || 'mananthavady'; // Assign default value here
-
-  const [selectedOption, setSelectedOption] = useState('');
-  const [displayedOption, setDisplayedOption] = useState('');
-
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-    setDisplayedOption(event.target.value);
-    props.onSelect(event.target.value); // Call the onSelect function passed in as a prop with the selected value
-  };
-
-  console.log(selectedOption);
-  console.log(movieLoc);
+  const { movieLoc, userName, language, genres } = props;
 
   const [movie, setMovies] = useState({});
-
+  const url="https://a.ltrbxd.com/resized/film-poster/8/3/8/1/4/0/838140-the-substance-0-2000-0-3000-crop.jpg?v=ab9e1072f8"
+  console.log('geoonnre', language,genres);
   useEffect(() => {
-    const csrftoken = getCsrfToken();
+    const csrftoken = getCookie('csrftoken');
 
     fetch('/articles/posternow/', {
       method: 'POST',
@@ -49,9 +41,7 @@ function Upcoming(props) {
         'Content-Type': 'application/json',
         'X-CSRFToken': csrftoken,
       },
-      body: JSON.stringify({
-        movieLoc: movieLoc, // Ensure movieLoc is not null
-      }),
+      body: JSON.stringify({ movieLoc }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -61,41 +51,60 @@ function Upcoming(props) {
       .catch((error) => {
         console.error('Error:', error);
       });
-  }, [movieLoc]); // Use movieLoc in the dependency array
+  }, [movieLoc]);
 
-  console.log(movie);
-
+  // Convert movie object to array for easier filtering
   const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
 
-  const posters = {
-    shazam: shazam,
-    blade: blade,
-    spiderverse: spiderverse,
-    'evil dead': evildead,
-    'john wick 4': johnwick,
-    jaws: jaws,
-    christopher: christopher,
-    avatar: avatar,
-    batman: batman,
-  };
+  // Filter movies by selected language and genres
+  const filteredMovies = movies.filter((mov) => {
+    const matchesLanguage = language ? mov.lang === language : true;
+    const matchesGenres = genres.length > 0 ? genres.some(genre => mov.genre.includes(genre)) : true;
+    return matchesLanguage && matchesGenres;
+  });
+
+  const posters = { shazam, blade, spiderverse, 'evil dead': evildead, 'john wick 4': johnwick, christopher, avatar, batman };
 
   return (
-    <div style={{ display: 'flex' }}>
-      {movies.map((mov) => (
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      {filteredMovies.map((mov) => (
         <div style={{ display: 'flex' }} key={mov.key}>
           <div className="card">
-            <div className='img_movie'>
-              <Link to='/Ratings' state={{ movieName: mov.name, movieDesc: mov.desc, movieGenre: mov.genre, movieImage: mov.image, movieDir: mov.dir, movieLang: mov.lang, movieLoc: movieLoc }}>
-                <img src={posters[mov.name]} alt="Movie Poster" style={{ display: 'flex', height: '300px', width: '240px', borderRadius: '20px 20px 0px 0px' }} />
+            <div className="img_movie">
+              <Link
+                to="/Ratings"
+                state={{
+                  movieName: mov.name,
+                  userName: userName,
+                  movieDesc: mov.desc,
+                  movieGenre: mov.genre,
+                  movieImage: mov.image,
+                  movieDir: mov.dir,
+                  movieLang: mov.lang,
+                  movieUrl: mov.url,
+                }}
+              >
+                <img
+                  src={mov.url}
+                  alt="Movie Poster"
+                  style={{ display: 'flex', height: '320px', width: '240px', borderRadius: '20px 20px 0px 0px' }}
+                />
               </Link>
             </div>
+
             <div className="container">
-              <h4><b>{mov.name}</b></h4>
+              
+                <b className='title'>{mov.name}</b>
+            
               <Link
-                to="/Theatredetails"
-                state={{ movName: mov.name, movGenre: mov.genre, movLang: mov.lang, movieLoc: movieLoc,userName:userName }}
+                to={userName ? "/Theatredetails" : "/Signin"}
+                state={
+                  userName
+                    ? { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName,movUrl:mov.url, }
+                    : {}
+                }
               >
-                <button className='book'>Book Ticket</button>
+                <button className="book">Book Ticket</button>
               </Link>
             </div>
           </div>

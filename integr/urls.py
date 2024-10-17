@@ -14,20 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
-from django.views.generic import TemplateView
-from . import views
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
-
-
-# from .views import ReactAppView
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index ,name='index'),
-    # path('articles/',views.my_view ,name='articles'),
-    path('', TemplateView.as_view(template_name='index.html')),
+    path('admin', admin.site.urls),  # Admin route, ensure it's at the top
+    path('', views.index ,name='index'),  # Home route for your app (React front-end)
+    
+    # API and other view routes
     path('get_text/', views.gettext, name='get_text'),
     path('my_view/', views.hello, name='my_view'),
     path('posterup/', views.posterup, name='poster'),
@@ -36,13 +32,20 @@ urlpatterns = [
     path('sign_up/', views.signup, name='sign_up'),
     path('sign_in/', views.signin, name='sign_in'),
     path('sign_out/', views.signout, name='sign_out'),
-    path('articles/', include('articles.urls')),
-    
-    
-    # path('', ReactAppView.as_view(), name='templates'),
-    # path('', TemplateView.as_view(template_name='templates/index.html')),
+    path('articles/', include('articles.urls')),  # Include articles URLs
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # Catch-all route for React frontend
+    re_path(r'^.*$', views.index, name='index')
+]
+
+# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -72,6 +72,7 @@ class Movie(models.Model):
     availability = models.CharField(max_length=20, choices=AVAILABILITY_CHOICES, default='none')
     language = models.CharField(max_length=20, choices=LANGUAGE_CHOICES, default='english')
     director = models.CharField(max_length=255,null=True)
+    url=models.TextField(null=True)
 
 
     def __str__(self):

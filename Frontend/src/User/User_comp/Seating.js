@@ -58,14 +58,11 @@ const { selectedDate } = props;
 const { movieLoc } = props;
 const { userName } = props;
 
-
-
 const [theaterShowtimes, setTheaterShowtimes] = useState([]);
 const [capacity, setCapacity] = useState([]);
 
 console.log('datey',selectedDate)
 console.log('namey',movieName)
-console.log('loc',movieLoc)
 
 useEffect(() => {
   const csrftoken = getCookie('csrftoken');

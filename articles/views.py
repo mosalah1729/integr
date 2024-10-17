@@ -396,6 +396,7 @@ def posternow(request):
             "desc": movie.description,
             "lang":movie.language,
             "dir":movie.director,
+             "url":movie.url,
         }
         print(movie.name)
     return JsonResponse({'movie': data})
@@ -425,6 +426,7 @@ def posterup(request):
             "desc": movie.description,
             "lang":movie.language,
             "dir":movie.director,
+             "url":movie.url,
         }
         print(movie.name)
     return JsonResponse({'movie': data})

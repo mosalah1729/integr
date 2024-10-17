@@ -48,28 +48,26 @@ function Theatre(props) {
   // const movieName = location.state?.movName;
   // const movieLocation = location.state?.selectedOption;
 
-  const { movieLoc } = props;
-  const { userName } = props;
+  
  
   const location = useLocation();
   const movieName = location.state?.movName;
   const movieGenre = location.state?.movGenre;
   const movieLang = location.state?.movLang;
-  // const userName = location.state?.userName;
-  // const movieLoc = location.state?.selectedOption;
+  const userName = location.state?.userName;
+  // const movieLocation = location.state?.selectedOption;
 
 
   
   React.useEffect(() => {
-    console.log('location from', location,movieLoc);
+    console.log('location from', location);
     console.log('movie name:', movieName);
     console.log('movie genre:', movieGenre);
-    console.log('userr:', userName);
   }, [location, movieName]);
 
   const [dates, setDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState('');
-  // const movieLoc="mananthavady"
+  const movieLoc="mananthavady"
   
   useEffect(() => {
     const today = new Date();
@@ -150,7 +148,7 @@ function Theatre(props) {
     </div> */}
     <form onSubmit={handleSubmit}>
     <div className='thea_date'>
-    <select value={selectedDate} onChange={handleSelectChange}>
+    <select className='selectdate' value={selectedDate} onChange={handleSelectChange}>
     <option value="">Date</option>
       {dates.map((date) => (
         <option key={date} value={date}>
@@ -167,9 +165,9 @@ function Theatre(props) {
     </form>
     {/* <div>{abc}</div> */}
     <div className='thea_seat'>
-    {selectedDate}
+    
 
-    <Seating movieName={movieName} selectedDate={selectedDate}  movieLoc={movieLoc} movieLang={movieLang} userName={userName} />
+    <Seating movieName={movieName} selectedDate={selectedDate}  movieLoc={movieLoc}movieLang={movieLang} userName={userName} />
 
     </div>
     </div>

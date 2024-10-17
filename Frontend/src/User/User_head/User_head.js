@@ -93,22 +93,26 @@ function User_head(props) {
   return (
     <div className="head">
       <div className="head_main">
-      {/* <img src="cineseer.png" style={{ width: '300px', height: 'auto', margin: '10px', position: 'relative', top: '-23px', left: '7px' }} /> */}
-
+        <div className='logo'>
+        <img src="https://i.postimg.cc/JnfLCMCj/cineseer-transformed-removebg-preview.png" style={{ width: '235px', height: 'auto', margin: '10px', position: 'relative', top: '-25px', left: '0px' }} />
+            </div>
 
 
         <div className="head_search">
           <input className="input_search" type="text" placeholder="Search..." />
           <button className="button" type="submit">
-            <img src={Search} alt="button" className="image" />
+            <img src="https://www.freeiconspng.com/uploads/search-icon-png-21.png" alt="button" className="image" />
+           
           </button>
         </div>
       </div>
       
       {userName ? (
         <div className="user-info">
-          <span style={{ position: 'absolute', left: '1231px', top: '46px', fontSize: '20px' }}>Hi, {userName}</span>
-
+          <span className='greet' style={{ position: 'absolute', left: '1231px', top: '46px', fontSize: '20px' }}>Hi, {userName}</span>
+           <Link to="/random">
+            <button className="random">Ratings</button>
+          </Link>
           <button className="sign" onClick={handleSignOut}>Sign Out</button>
           
         </div>
@@ -118,8 +122,10 @@ function User_head(props) {
           <Link to="/Signin">
             <button className="sign">Sign In</button>
           </Link>
+
         </div>
       )}
+      
     </div>
   );
   

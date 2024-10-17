@@ -10,7 +10,7 @@ function Random() {
 
   useEffect(() => {
     async function getTopMovies() {
-      const apiKey = '4d58c8b1';
+      const apiKey = 'b6bff5f';
       const baseUrl = 'http://www.omdbapi.com/';
       const keywords = ["god", "father", "sick", "dog", "evil", "dark", "top", "man", "ghost", "hunt", "fear", "night", "see", "good", "once", "disney"];
       const key = Math.floor(Math.random() * keywords.length);
@@ -50,7 +50,7 @@ function Random() {
 
   const handleRateMovie = () => {
     axios
-      .get(`https://www.omdbapi.com/?i=${currentMovie.imdbID}&apikey=4d58c8b1&rating=${rating[currentMovie.imdbID]}`)
+      .get(`https://www.omdbapi.com/?i=${currentMovie.imdbID}&apikey=b6bff5f&rating=${rating[currentMovie.imdbID]}`)
       .then(response => console.log(response.data))
       .catch(error => console.error(error));
     handleNextMovie();

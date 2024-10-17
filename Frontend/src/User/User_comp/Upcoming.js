@@ -104,9 +104,9 @@
 // // export default Upcoming
 // import './css/Upcoming.css'
 // import avatar from '../../Image/Avatar2.jpg'
-// import jaws from '../../Image/Jaws.jpeg'
+// import  from '../../Image/.jpeg'
 // import inception from '../../Image/Inception.jpeg'
-// // import jaws from '../../media/jaws-movie-poster_oEJ6qEs.jpeg'
+// // import  from '../../media/-movie-poster_oEJ6qEs.jpeg'
 // import {Link} from 'react-router-dom'
 
 // import axios from 'axios';
@@ -151,7 +151,7 @@
   
 //     // const movie = {
 //     //   obj1: { name: 'avatar', age: 25 },
-//     //   obj2: { name: 'jaws', age: 30 },
+//     //   obj2: { name: '', age: 30 },
 //     //   obj3: { name: 'inception', age: 35 },
       
 
@@ -176,9 +176,9 @@
 //     //   genre: movie.genre,
 //     //   desc: movie.desc
 //     // }));
-//     const posters = { avatar: avatar, jaws: jaws, inception: inception };
+//     const posters = { avatar: avatar, : , inception: inception };
 
-//     // const posterUrl = '/media/jaws-movie-poster_oEJ6qEs.jpeg';
+//     // const posterUrl = '/media/-movie-poster_oEJ6qEs.jpeg';
 //   return (
 //     <div style={{ display: 'flex' }}>
 //     {movies.map((movie) => (
@@ -228,7 +228,7 @@ import blade from '../../Image/blade.jpeg'
 import shazam from '../../Image/shazam.jpg'
 // import evildead from '../../Image/shazam.jpg'
 import johnwick from '../../Image/jw4.jpeg'
-import jaws from '../../Image/Jaws.jpeg'
+// import  from '../../Image/.jpeg'
 import christopher from '../../Image/chistopher.jpeg'
 import avatar from '../../Image/Avatar.jpg'
 import evildead from '../../Image/ed2.jpeg'
@@ -242,195 +242,107 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 
-// function getCookie(name) {
-//   let cookieValue = null;
-//   if (document.cookie && document.cookie !== '') {
-//     const cookies = document.cookie.split(';');
-//     for (let i = 0; i < cookies.length; i++) {
-//       const cookie = cookies[i].trim();
-//       if (cookie.substring(0, name.length + 1) === name + '=') {
-//         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-//         break;
-//       }
-//     }
-//   }
-//   return cookieValue;
-// }
-
-function getCsrfToken() {
-  return document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === name + '=') {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
 }
 
 function Nowshowing(props) {
+  const { movieLoc, userName, language, genres } = props;
 
+  const [movie, setMovies] = useState({});
+  const url="https://a.ltrbxd.com/resized/film-poster/8/3/8/1/4/0/838140-the-substance-0-2000-0-3000-crop.jpg?v=ab9e1072f8"
+  console.log('geoonnre', language,genres);
+  useEffect(() => {
+    const csrftoken = getCookie('csrftoken');
 
-  const { movieLoc } = props;
- 
-//   const [selectedOption, setSelectedOption] = useState('');
-
-// const handleOptionSelect = (option) => {
-//   setSelectedOption(option);
-// };
-
-const [selectedOption, setSelectedOption] = useState('');
-  const [displayedOption, setDisplayedOption] = useState('');
-
-  const handleSelectChange = (event) => {
-    setSelectedOption(event.target.value);
-    setDisplayedOption(event.target.value);
-    props.onSelect(event.target.value); // Call the onSelect function passed in as a prop with the selected value
-  };
-  console.log(selectedOption)
-  console.log('upcoming loc',movieLoc)
-  // const [dete, setAbcd] = useState({});
-
-  // useEffect(() => {
-  //   axios.get('/get_text/')
-  //     .then(response => setAbcd(response.data))
-  //     .catch(error => console.error(error));
-  // }, []);
-
-
-  const [abc, setText] = useState('');
-  // for testsing app accessing
-  // useEffect(() => {
-  //   fetch('/articles/my_view/')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data); // Print the entire response data in the console
-  //       setText(data.text);
-  //     })
-  //     .catch(error => console.error('Error fetching data:', error));
-  // }, []);
-  // const [def, setTxt] = useState('');
-  
-  // useEffect(() => {
-  //   fetch('/my_view/')
-  //     .then(response => response.json())
-  //     .then(data => setTxt(data.text));
-  // }, []);
-
-  
-    // const objOfObjs = {
-    //   obj1: { name: 'John', age: 25 },
-    //   obj2: { name: 'Jane', age: 30 },
-    //   obj3: { name: 'Jack', age: 35 },
-      
-
-    // };
-
-
-    // this is main code for movie loop
-    const [movie, setMovies] = useState({});
-
-    // useEffect(() => {
-    //   fetch('/articles/posternow/')
-    //     .then(response => response.json())
-    //     .then(data => setMovies(data.movie));
-    // }, []);
-
-  //  this is working
-    // useEffect(() => {
-    //   if (movieLoc) {
-    //     const url = `/articles/posternow/?selectedOption=${encodeURIComponent(movieLoc)}`;
-    //     fetch(url)
-    //       .then(response => response.json())
-    //       .then(data => setMovies(data.movie));
-    //   }
-    // }, [movieLoc]);
-
-
-//     const url = '/articles/posternow/';
-// const options = {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({ movieLoc: movieLoc })
-// };
-// fetch(url, options)
-//   .then(response => response.json())
-//   .then(data => setMovies(data.movie));
-
-
-
-useEffect(() => {
-  const csrftoken = getCsrfToken();
-
-  fetch('/articles/posterup/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRFToken': csrftoken,
-    },
-    body: JSON.stringify({
-      // movieName: movieName,
-      // selectedDate: selectedDate,
-      movieLoc: movieLoc,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {setMovies(data.movie)
-      console.log('Success:', data);
-      // setTheaterShowtimes(data.theater_showtimes);
+    fetch('/articles/posterup/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftoken,
+      },
+      body: JSON.stringify({ movieLoc }),
     })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-}, [ movieLoc]);
+      .then((response) => response.json())
+      .then((data) => {
+        setMovies(data.movie);
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }, [movieLoc]);
 
+  // Convert movie object to array for easier filtering
+  const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
 
-    
+  // Filter movies by selected language and genres
+  const filteredMovies = movies.filter((mov) => {
+    const matchesLanguage = language ? mov.lang === language : true;
+    const matchesGenres = genres.length > 0 ? genres.some(genre => mov.genre.includes(genre)) : true;
+    return matchesLanguage && matchesGenres;
+  });
 
+  const posters = { shazam, blade, spiderverse, 'evil dead': evildead, 'john wick 4': johnwick, christopher, avatar, batman };
 
-   console.log(movie)
-  
-    const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
-
-    // const movies = Object.values(mov).map(mov => ({
-    //   key: mov.id,
-    //   name: mov.name,
-    //   genre: mov.genre,
-    //   desc: mov.desc
-    // }));
-    const posters = { shazam: shazam, blade: blade, spiderverse: spiderverse,'evil dead':evildead ,'john wick 4':johnwick,'jaws':jaws,'christopher':christopher,'avatar':avatar,batman:batman};
-    // const [mov, setText] = useState('Hello, world!');
-    // const mov='varr'
-    // const posterUrl = '/media/jaws-mov-poster_oEJ6qEs.jpeg';
   return (
-    <div style={{ display: 'flex' }}>
-  
-  <div>
-    {abc}
-  </div>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      {filteredMovies.map((mov) => (
+        <div style={{ display: 'flex' }} key={mov.key}>
+          <div className="card">
+            <div className="img_movie">
+              <Link
+                to="/Ratings"
+                state={{
+                  movieName: mov.name,
+                  userName: userName,
+                  movieDesc: mov.desc,
+                  movieGenre: mov.genre,
+                  movieImage: mov.image,
+                  movieDir: mov.dir,
+                  movieLang: mov.lang,
+                  movieUrl: mov.url,
+                }}
+              >
+                <img
+                  src={mov.url}
+                  alt="Movie Poster"
+                  style={{ display: 'flex', height: '320px', width: '240px', borderRadius: '20px 20px 0px 0px' }}
+                />
+              </Link>
+            </div>
 
-  {movies.map((mov) => (
-    <div style={{display:'flex'}}>
-      <div className="card" 
-      key={mov.key}
-      >
-        <div className='img_movie'>
-          <Link to='/Ratings' state={ {movieName: mov.name ,movieDesc: mov.desc ,movieGenre: mov.genre ,movieImage: mov.image ,movieDir: mov.dir,movieLang:mov.lang ,movieLoc:movieLoc }}>
-          <img src={posters[mov.name]} alt="Movie Poster" style={{ display: 'flex', height: '300px', width: '240px', borderRadius: '20px 20px 0px 0px' }} />
-          </Link>
+            <div className="container">
+              
+                <b className='title'>{mov.name}</b>
+            
+              <Link
+                to={userName ? "/Theatredetails" : "/Signin"}
+                state={
+                  userName
+                    ? { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName }
+                    : {}
+                }
+              >
+                <button className="book">Book Ticket</button>
+              </Link>
+            </div>
+          </div>
         </div>
-        
-        <div class="container">
-          <h4><b>{mov.name}</b></h4>
-          {/* <Link to='/Theatredetails'> selectedOption: selectedOption, */}
-          <Link
-              to="/Theatredetails"
-                state={{  movName : mov.name,movGenre: mov.genre,movLang: mov.lang,movieLoc:movieLoc}}>
-          <button className='book'>Book Ticket</button></Link>
-        </div>
-        {/* <><span>No Image  </span><div>3 {mov.image} </div></> */}
-      </div>
+      ))}
     </div>
-  ))} 
-</div>
-
-  )
-  
+  );
 }
 
 export default Nowshowing
