@@ -1,7 +1,6 @@
 // import React from 'react'
-import '../Sign/css/Signup.css'
-// import React from 'react'
-import './css/Signin.css'
+import '../signup/Signup.css'
+
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
@@ -36,8 +35,8 @@ setFormData({ ...formData, [name]: value });
 
 
   return (
-    <div className='main'>
-    <div className='sub-main'>
+    <div className='mains'>
+    <div className='sub-mains'>
       <form onSubmit={handleSubmit}>
         <div>
           <h1>Sign up</h1>

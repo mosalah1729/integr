@@ -64,6 +64,10 @@
     font-size: 15px;
     color: black;
 }
+.sign:hover {
+    background-color: #bcfcff;
+    
+  }
 .random
 {
     height: 37px;
@@ -96,3 +100,6 @@
     display: flex; /* Use flexbox for horizontal alignment */
     
 }
+.buttons:hover {
+    background-color: #bcfcff;
+  }

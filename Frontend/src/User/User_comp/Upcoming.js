@@ -404,12 +404,12 @@ useEffect(() => {
       >
         <div className='img_movie'>
           <Link to='/Ratings' state={ {movieName: mov.name ,movieDesc: mov.desc ,movieGenre: mov.genre ,movieImage: mov.image ,movieDir: mov.dir,movieLang:mov.lang  }}>
-          <img src={posters[mov.name]} alt="Movie Poster" style={{ display: 'flex', height: '300px', width: '240px', borderRadius: '20px 20px 0px 0px' }} />
+          <img src={posters[mov.name]} alt="Movie Poster" style={{ display: 'flex', height: '321px', width: '240px', borderRadius: '20px 20px 0px 0px' }} />
           </Link>
         </div>
         
         <div class="container">
-          <h4><b>{mov.name}</b></h4>
+          <h4><b className='title'>{mov.name}</b></h4>
           {/* <Link to='/Theatredetails'> selectedOption: selectedOption, */}
           <Link
               to="/Theatredetails"

@@ -1,0 +1,71 @@
+.main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    height: 550px;
+    background: #F2F2F2;
+}
+
+.sub-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 410px;
+    width: 35%;
+    box-shadow: 11px 12px 13px 12px #f3eded;
+    padding-top: 30px;
+    border-radius: 60px;
+    background-color: #F3E1DA;
+}
+
+.email, .pass {
+    display: flex;
+    flex-direction: column; /* Align label and input vertically */
+    align-items: center; /* Center elements horizontally */
+    margin: 20px -38px; /* Space between inputs */
+}
+
+.email label, .pass label {
+    font-size: 20px; /* Consistent font size for labels */
+}
+
+input {
+    width: 100%; /* Full width input */
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-left: 15px; /* Add some padding inside the input */
+}
+
+.input {
+    font-size: 20px; /* Ensure consistent font size for inputs */
+}
+
+.login-button {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background: #FF8C4B;
+    border-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffa069;
+}
+
+.link {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+a {
+    color: black;
+}

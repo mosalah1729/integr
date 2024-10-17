@@ -13,19 +13,26 @@
       height: 40px;
     }
     .book
-  {
-    width: 230px;
-    margin-top: 25px;
-    background: transparent;
-    border-style: none;
-    color: #4ad0ef;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-left: 54px;
-    display: flex;
-  }
+{
+  width: 240px;
+  margin-top: 31px;
+  background: transparent;
+  border-style: none;
+  color: #4ad0ef;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+}
+.book:hover {
+  background-color: #bcfcff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+} 
   .img_movie{
     border-color: aliceblue;
     border-width: 8px;
   }
+  
+  

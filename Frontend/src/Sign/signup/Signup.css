@@ -1,5 +1,5 @@
 
-.main {
+.mains {
   text-align: center;
   justify-content: center;
   display: flex;
@@ -8,7 +8,7 @@
   height: 550px;
   background:#F2F2F2;
   }
-.sub-main {
+.sub-mains {
   display: flex;
   justify-content: center;
   height: 450px;
@@ -26,7 +26,7 @@
   border-style: solid;
 } 
 input{
-  width: 15rem;
+  width: 20rem;
   height: 40px;
   border: none;
   outline: none;
@@ -41,7 +41,7 @@ margin-left: -40px;
 .pass{
   margin-top: 25px;
   font-size: 20px;
-  margin-left: -75px;
+  margin-left: -42px;
 }
 .Pass
 {

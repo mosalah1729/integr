@@ -30,6 +30,7 @@ function Upcoming(props) {
   const { movieLoc, userName, language, genres } = props;
 
   const [movie, setMovies] = useState({});
+  const url="https://a.ltrbxd.com/resized/film-poster/8/3/8/1/4/0/838140-the-substance-0-2000-0-3000-crop.jpg?v=ab9e1072f8"
   console.log('geoonnre', language,genres);
   useEffect(() => {
     const csrftoken = getCookie('csrftoken');
@@ -83,17 +84,17 @@ function Upcoming(props) {
                 }}
               >
                 <img
-                  src={posters[mov.name]}
+                  src={url}
                   alt="Movie Poster"
-                  style={{ display: 'flex', height: '300px', width: '240px', borderRadius: '20px 20px 0px 0px' }}
+                  style={{ display: 'flex', height: '320px', width: '240px', borderRadius: '20px 20px 0px 0px' }}
                 />
               </Link>
             </div>
 
             <div className="container">
-              <h4>
-                <b>{mov.name}</b>
-              </h4>
+              
+                <b className='title'>{mov.name}</b>
+            
               <Link
                 to={userName ? "/Theatredetails" : "/Signin"}
                 state={
