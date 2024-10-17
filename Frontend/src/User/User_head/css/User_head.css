@@ -1,6 +1,6 @@
 .head
 {
-    background: #FF640D;
+    background: #1c1c1c;
     width: 100%;
     height: 100px;
 }
@@ -11,7 +11,7 @@
 }
 .input_search{
     align-items: center;
-    background: #fc9051;
+    background: #3d3d3d;
     border: 2px;
     border-color: #fff;
     border-radius: 7px;
@@ -20,9 +20,9 @@
     font-size: 15px;
     height: 50px;
     outline: none;
-    width: 31%;
+    width: 547px;
     /* float: left; */
-    margin-left: 300px;
+    margin-left: 182px;
     margin-top: 22px;
 }
 .button
@@ -30,7 +30,7 @@
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    margin-left: -30px;
+    margin-left: -35px;
     background: transparent;
 }
 .image
@@ -52,35 +52,47 @@
 }
 .sign
 {
-    height: 42px;
-    width: 70px;
+    height: 37px;
+    width: 75px;
     position: absolute;
     right: 150px;
     cursor: pointer;
-    background: #fc9051;
+    background: #4ad0ef;
     border-radius: 10px;
-    top: 31px;
-    border-color: #d6cab4;
+    top: 35px;
+    border-color: #000000;
     font-size: 15px;
+    color: black;
 }
 .random
 {
-    height: 32px;
+    height: 37px;
     width: 70px;
     position: absolute;
-    right: 150px;
+    top: 34px;
+    right: 62px;
     cursor: pointer;
-    background: #fc9051;
+    background: #4ad0ef;
     border-radius: 10px;
-    border-color: #d6cab4;
+    border-color: #000000;
     font-size: 15px;
+    color: black;
 }
 .user-info {
     display: inline-block;
   }
   
-  .user-info span {
+  /* .user-info span {
     display: inline-block;
     margin-right: 10px;
-  }
+  } */
   
+  .greet{
+    top: 34px;
+    right: 62px;
+    color: aliceblue;
+  }
+  .head_main {
+    display: flex; /* Use flexbox for horizontal alignment */
+    
+}

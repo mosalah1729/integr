@@ -2,15 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development', 
+  mode: 'development',
   entry: './src/index.js', // Entry point for your React app
   output: {
     path: path.resolve(__dirname, '../Frontend/build'), // Adjust the path to your Django static folder
     filename: 'static/js/bundle.[contenthash].js', // Set the JS output prefix to 'static/js/'
     chunkFilename: 'static/js/[name].[contenthash].js', // Handle dynamically imported chunks
     publicPath: '/', // For React Router, useful in production
-},
-
+  },
   module: {
     rules: [
       {
@@ -28,14 +27,13 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',  // Keep original path and filename
-              outputPath: 'images/',       // Output directory for images
-              publicPath: '/Frontend/build/media/', // Public URL of the output resource
+              name: '[name].[ext]',  // Use the original file name and extension
+              outputPath: 'media/src/Image/',  // Output directory inside the build folder
+              publicPath: '/media/src/Image/', // Public URL to access the images (relative to build folder)
             },
           },
         ],
       }
-      
     ],
   },
   resolve: {

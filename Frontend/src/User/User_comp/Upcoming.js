@@ -104,9 +104,9 @@
 // // export default Upcoming
 // import './css/Upcoming.css'
 // import avatar from '../../Image/Avatar2.jpg'
-// import jaws from '../../Image/Jaws.jpeg'
+// import  from '../../Image/.jpeg'
 // import inception from '../../Image/Inception.jpeg'
-// // import jaws from '../../media/jaws-movie-poster_oEJ6qEs.jpeg'
+// // import  from '../../media/-movie-poster_oEJ6qEs.jpeg'
 // import {Link} from 'react-router-dom'
 
 // import axios from 'axios';
@@ -151,7 +151,7 @@
   
 //     // const movie = {
 //     //   obj1: { name: 'avatar', age: 25 },
-//     //   obj2: { name: 'jaws', age: 30 },
+//     //   obj2: { name: '', age: 30 },
 //     //   obj3: { name: 'inception', age: 35 },
       
 
@@ -176,9 +176,9 @@
 //     //   genre: movie.genre,
 //     //   desc: movie.desc
 //     // }));
-//     const posters = { avatar: avatar, jaws: jaws, inception: inception };
+//     const posters = { avatar: avatar, : , inception: inception };
 
-//     // const posterUrl = '/media/jaws-movie-poster_oEJ6qEs.jpeg';
+//     // const posterUrl = '/media/-movie-poster_oEJ6qEs.jpeg';
 //   return (
 //     <div style={{ display: 'flex' }}>
 //     {movies.map((movie) => (
@@ -228,7 +228,7 @@ import blade from '../../Image/blade.jpeg'
 import shazam from '../../Image/shazam.jpg'
 // import evildead from '../../Image/shazam.jpg'
 import johnwick from '../../Image/jw4.jpeg'
-import jaws from '../../Image/Jaws.jpeg'
+// import  from '../../Image/.jpeg'
 import christopher from '../../Image/chistopher.jpeg'
 import avatar from '../../Image/Avatar.jpg'
 import evildead from '../../Image/ed2.jpeg'
@@ -386,10 +386,10 @@ useEffect(() => {
     //   genre: mov.genre,
     //   desc: mov.desc
     // }));
-    const posters = { shazam: shazam, blade: blade, spiderverse: spiderverse,'evil dead':evildead ,'john wick 4':johnwick,'jaws':jaws,'christopher':christopher,'avatar':avatar,batman:batman};
+    const posters = { shazam: shazam, blade: blade, spiderverse: spiderverse,'evil dead':evildead ,'john wick 4':johnwick,'christopher':christopher,'avatar':avatar,batman:batman};
     // const [mov, setText] = useState('Hello, world!');
     // const mov='varr'
-    // const posterUrl = '/media/jaws-mov-poster_oEJ6qEs.jpeg';
+    // const posterUrl = '/media/-mov-poster_oEJ6qEs.jpeg';
   return (
     <div style={{ display: 'flex' }}>
   

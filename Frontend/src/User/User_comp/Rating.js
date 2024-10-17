@@ -10,7 +10,7 @@ import blade from '../../Image/blade.jpeg'
 import shazam from '../../Image/shazam.jpg'
 // import evildead from '../../Image/shazam.jpg'
 import johnwick from '../../Image/jw4.jpeg'
-import jaws from '../../Image/Jaws.jpeg'
+// impor from '../../Imag.jpeg'
 import christopher from '../../Image/chistopher.jpeg'
 import avatar from '../../Image/Avatar.jpg'
 import evildead from '../../Image/ed2.jpeg'
@@ -56,7 +56,7 @@ function Rating(props) {
     console.log('movie name:', movieName);
   }, [location, movieName]);
   
-  const posters = { shazam: shazam, blade: blade, spiderverse: spiderverse,'evil dead':evildead ,'john wick 4':johnwick,'jaws':jaws,'christopher':christopher,'avatar':avatar,batman:batman};
+  const posters = { shazam: shazam, blade: blade, spiderverse: spiderverse,'evil dead':evildead ,'john wick 4':johnwick,'christopher':christopher,'avatar':avatar,batman:batman};
 
 
   useEffect(() => {
@@ -221,48 +221,3 @@ export default Rating
 
 
 
-
-
-
-
-
-// return (
-//   <div className='rate_main'>
-//     <div className='rate_submain'>
-//      <div className='rate_movie'>
-//       <img className='rate_image' src={posters[movieName]} alt='nothing'></img>
-//      </div>
-//      <div style={{marginTop:'485px',marginLeft:'-331px'}}>
-//      <Link to='/Theatredetails'> <button className='rate_button'><b>Book Ticket</b></button></Link>
-//      </div>
-//     </div> 
-//     <div className='rate_sec'>
-//      <div  className='rate_score'>
-//          <h1>Predicted Rating</h1>
-//      </div>
-
-//      <div>
-//     <h1>Movie Name: {movieName}</h1>
-//     <b>Genre:</b>{movieGenre}
-//     {/* <p><h3>Director:</h3><span>{movieDir}</span></p> */}
-//     <p><b >Director:</b>{movieDir}</p>
-
-//   </div>
-//      <div  className='rate_score'>
-//        <h1>your score:  </h1>
-//        <input type="text" ></input>
-//     </div>
-//     <div   className='rate_score'>
-//       <h1>synopsis</h1>
-//       <div>{movieDesc}</div>
-//     </div>
-//     <div   className='rate_score1'>
-//       <h1>user ratings</h1>
-//       <Link to='/Userreview'>
-//       <button className='rate_rev'>Click here &gt;</button>
-//       </Link>
-//     </div>
-//     </div> 
-//   </div>
-// )
-// }

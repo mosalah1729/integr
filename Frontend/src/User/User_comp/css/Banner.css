@@ -1,72 +1,126 @@
-.Banner
-{
-    height:900px;
+/* Banner.css */
+
+/* General styling for the Banner container */
+.Banner {
+    height: 900px;
     width: 100%;
-    background: rgba(242, 242, 242, 1);
-   /* background: linear-gradient(#e8e5e5,#e3dbdb,#E2E2E2);*/
+    background: #f7fdff;
+    /* Uncomment below if you want gradient background */
+    /* background: linear-gradient(#e8e5e5,#e3dbdb,#E2E2E2); */
     display: flex;
-}
-.select
-{
+    color: azure;
+    position: relative; /* For absolute positioning of child elements */
+  }
+  
+  /* Styling for the select container */
+  .select {
     position: absolute;
     width: 350px;
-    height: 65px;
-    background: rgb(247, 228, 221);
-    margin-left: 610px;
-    margin-top: 96x;
-    margin-top: 160px;
+    height: 66px;
+    background: #3d3d3d;
+    margin-left: 51px;
+    margin-top: 174px;
+    border-radius: 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Styling for the language container */
+
+  
+  /* Hides scrollbar for the .lang section */
+  .lang::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
+
+  
+  /* Movies container */
+  .movies {
+    position: absolute;
+    width: 963px;
+    height: 550px;
+    background: #3d3d3d;
     border-radius: 20px;
-}
-.lang
-{    
-    position: absolute;
-    background: rgb(247, 228, 221);
-    height: 550px;
-    width: 500px;
-    margin-left: 30px;
-    margin-top: 250px;
-    border-radius: 63px;
-    /* display: flex; */
-    justify-content: center;
-    /* max-height: 200px; */
-    /* max-width: 200px; */
-    overflow: auto;
-}
-.lang {
-    display: block;
-    overflow-y: scroll;
-    /* max-height: 300px; adjust the max-height to your desired value */
-  }
-  
-.lang label {
-    display: block;
-  }
-  
-.movies
-{
-    position: absolute;
-    width: 950px;
-    height: 550px;
-    background: #F3E1DA;
-    border-radius: 63px;
-    margin-left: 560px;
+    margin-left: 499px;
     margin-top: 250px;
     overflow-y: scroll;
-}
-.buttons
-{
+  }
+  
+  /* Hides scrollbar for the .movies section */
+  .movies::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+  }
+  
+  /* Button styling */
+  .buttons {
     height: 50px;
-    width: 160px;
-    background: white;
-    border-radius: 15px;
+    width: 159px;
+    background: #5d5d5d;
+    border-radius: 9px;
     margin-left: 11px;
     margin-top: 7px;
     font-size: 15px;
     font-weight: bold;
-    border-style: none;
+    border: none; /* No border */
     cursor: pointer;
-}
-.lang label {
+    color: white; /* Added button text color */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Button hover effect */
+  .buttons:hover {
+    background-color: #00f2fe;
+  }
+  
+  /* Styling for the select dropdown */
+  .simple-select-box {
+    color: black;
+  }
+ /* Styling for the language container */
+.lang {
+    position: absolute;
+    background: #3d3d3d;
+    height: 550px;
+    width: 398px;
+    margin-left: 50px;
+    margin-top: 250px;
+    border-radius: 10px;
     display: block;
+    overflow-y: scroll;
+  }
+  
+  /* Language radio buttons */
+  .lang label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left */
+    margin-bottom: 10px; /* Add space between each label */
+    padding-left: 20px; /* Adjust distance from the left side */
+  }
+  
+  .lang input[type="radio"] {
+    width: 15px; /* Smaller size */
+    height: 15px; /* Smaller size */
+    margin-right: 10px; /* Adjust spacing between the button and label text */
+  }
+  
+  /* Genres section */
+  .genres {
+    margin-top: 20px;
+  }
+  
+  .genres label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align checkboxes to the left */
+    margin-bottom: 10px; /* Add space between each label */
+    padding-left: 20px; /* Adjust distance from the left side */
+  }
+  
+  .genres input[type="checkbox"] {
+    width: 15px; /* Smaller size */
+    height: 15px; /* Smaller size */
+    margin-right: 10px; /* Adjust spacing between the checkbox and label text */
   }
   
