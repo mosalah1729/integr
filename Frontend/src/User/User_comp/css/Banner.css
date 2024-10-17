@@ -95,8 +95,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align to the left */
-    margin-bottom: 10px; /* Add space between each label */
-    padding-left: 20px; /* Adjust distance from the left side */
+    margin-bottom: 20px; /* Add space between each label */
+    padding-left: 20px; 
+    margin-left: 10px;/* Adjust distance from the left side */
   }
   
   .lang input[type="radio"] {
@@ -114,8 +115,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align checkboxes to the left */
-    margin-bottom: 10px; /* Add space between each label */
-    padding-left: 20px; /* Adjust distance from the left side */
+    margin-bottom: 20px; /* Add space between each label */
+    padding-left: 20px;
+    margin-left: 12px; /* Adjust distance from the left side */
   }
   
   .genres input[type="checkbox"] {
@@ -123,4 +125,16 @@
     height: 15px; /* Smaller size */
     margin-right: 10px; /* Adjust spacing between the checkbox and label text */
   }
+  .lang label {
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
   
+  .genres label {
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+  }

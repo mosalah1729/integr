@@ -148,7 +148,7 @@ function Theatre(props) {
     </div> */}
     <form onSubmit={handleSubmit}>
     <div className='thea_date'>
-    <select value={selectedDate} onChange={handleSelectChange}>
+    <select className='selectdate' value={selectedDate} onChange={handleSelectChange}>
     <option value="">Date</option>
       {dates.map((date) => (
         <option key={date} value={date}>
@@ -165,7 +165,7 @@ function Theatre(props) {
     </form>
     {/* <div>{abc}</div> */}
     <div className='thea_seat'>
-    {selectedDate}
+    
 
     <Seating movieName={movieName} selectedDate={selectedDate}  movieLoc={movieLoc}movieLang={movieLang} userName={userName} />
 

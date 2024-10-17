@@ -191,9 +191,9 @@ function Seating(props) {
                       width: '30px',
                       height: '30px',
                       margin: '5px',
-                      backgroundColor: isOccupied ? 'grey' : isSelected ? 'orange' : 'white',
+                      backgroundColor: isOccupied ? 'grey' : isSelected ? '#4ad0ef' : 'white',
                       cursor: isOccupied ? 'not-allowed' : 'pointer',
-                      border: '1px solid orange',
+                      border: '1px solid #4ad0ef',
                       borderRadius: '5px',
                       marginRight: col === 4 ? '10px' : '0px',
                     }}
@@ -215,8 +215,8 @@ function Seating(props) {
           <div style={{ width: '180px', height: '15px', margin: '5px', backgroundColor: 'grey' }} />
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-          <div style={{ width: '30px', height: '30px', margin: '5px', backgroundColor: 'white', border: '1px solid orange', borderRadius: '5px' }} />available
-          <div style={{ width: '30px', height: '30px', margin: '5px', backgroundColor: 'orange', border: '1px solid orange', borderRadius: '5px' }} />selected
+          <div style={{ width: '30px', height: '30px', margin: '5px', backgroundColor: 'white', border: '1px solid #4ad0ef', borderRadius: '5px' }} />available
+          <div style={{ width: '30px', height: '30px', margin: '5px', backgroundColor: '#4ad0ef', border: '1px solid #4ad0ef', borderRadius: '5px' }} />selected
           <div style={{ width: '30px', height: '30px', margin: '5px', backgroundColor: 'grey', borderRadius: '5px' }} />sold
         </div>
       </div>

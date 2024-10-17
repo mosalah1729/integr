@@ -83,8 +83,8 @@ function Sign(props) {
           {response && <p>{response}</p>}
           <div>
             <p className="link">
-              <b>Don't have an account yet?</b>
-              <Link to="/Signup"> Register now</Link>
+              <b>Don't have an account yet?
+              <Link to="/Signup"> Register now</Link></b>
             </p>
           </div>
         </form>

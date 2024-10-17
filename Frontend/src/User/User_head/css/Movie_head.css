@@ -2,9 +2,11 @@
 {
     height: 135px;
     width: 100%;
-    background: #FF640D;
+    background: #3b3b3b;
     display: flex;
    flex-direction: column;
+   color:white;
+   
 }
 .Moviehead_h
 {   

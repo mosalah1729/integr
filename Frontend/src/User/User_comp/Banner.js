@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 function Banner(props) {
   const { userName } = props;
   const [showNowShowing, setShowNowShowing] = useState(true);
-  const [selectedOption, setSelectedOption] = useState('');
-  const [displayedOption, setDisplayedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState('mananthavady');
+  const [displayedOption, setDisplayedOption] = useState('mananthavady');
   const [selectedLanguage, setSelectedLanguage] = useState('');
   const [selectedGenres, setSelectedGenres] = useState([]);
 
@@ -78,7 +78,7 @@ function Banner(props) {
       </div>
 
       <div className='lang' style={{ display: 'block' }}>
-        <h1 style={{ marginRight: '20px' }}>Language</h1>
+        <h1 style={{marginLeft: '21px' }}>Language</h1>
         <label style={{ marginRight: '20px' }}>
           <input type="radio" name="language" value="english" onChange={handleLanguageChange} />
           English
@@ -101,7 +101,7 @@ function Banner(props) {
         </label>
 
         <div className='genres'>
-          <h1>Genres</h1>
+          <h1 style={{ marginLeft: '21px' }}>Genres</h1>
           <label>
             <input type="checkbox" name="genre" value="horror" onChange={handleGenreChange} />
             Horror
@@ -122,11 +122,15 @@ function Banner(props) {
             <input type="checkbox" name="genre" value="thriller" onChange={handleGenreChange} />
             Thriller
           </label>
+          <label>
+            <input type="checkbox" name="genre" value="thriller" onChange={handleGenreChange} />
+            Comedy
+          </label>
         </div>
       </div>
 
       <div className='movies'>
-        <h1 style={{ marginLeft: '400px' }}>Movies in</h1>
+        <h1 style={{ marginLeft: '58px', fontFamily:'poppins' }}>Movies in <b style={{ color:'#4ad0ef' }}>{selectedOption}</b> </h1>
         {showNowShowing
           ? <Nowshow movieLoc={selectedOption} userName={userName} language={selectedLanguage} genres={selectedGenres} />
           : <Upcoming movieLoc={selectedOption} userName={userName} language={selectedLanguage} genres={selectedGenres} />

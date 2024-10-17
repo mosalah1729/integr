@@ -47,6 +47,7 @@ function Rating(props) {
   const movieImage = location.state?.movieImage;
   const movieDir = location.state?.movieDir;
   const movieLang = location.state?.movieLang;
+  const movieUrl = location.state?.movieUrl;
   const userName = location.state?.userName;
   
   console.log("ratingilethi",userName)
@@ -88,7 +89,7 @@ return (
   <div className='rate_main'>
     <div className='rate_submain'>
      <div className='rate_movie'>
-      <img className='rate_image' src= {posters[movieName]} alt='nothing'></img>
+      <img className='rate_image' src= {movieUrl} alt='nothing'></img>
      </div>
      <div style={{marginTop:'485px',marginLeft:'-331px'}}>
      {/* <Link to='/Theatredetails'> <button className=''><b>Book Ticket</b></button></Link> */}

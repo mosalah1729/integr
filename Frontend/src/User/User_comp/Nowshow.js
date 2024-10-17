@@ -81,10 +81,11 @@ function Upcoming(props) {
                   movieImage: mov.image,
                   movieDir: mov.dir,
                   movieLang: mov.lang,
+                  movieUrl: mov.url,
                 }}
               >
                 <img
-                  src={url}
+                  src={mov.url}
                   alt="Movie Poster"
                   style={{ display: 'flex', height: '320px', width: '240px', borderRadius: '20px 20px 0px 0px' }}
                 />
@@ -99,7 +100,7 @@ function Upcoming(props) {
                 to={userName ? "/Theatredetails" : "/Signin"}
                 state={
                   userName
-                    ? { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName }
+                    ? { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName,movUrl:mov.url, }
                     : {}
                 }
               >
