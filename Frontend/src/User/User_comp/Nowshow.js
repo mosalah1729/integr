@@ -52,7 +52,7 @@ function Upcoming(props) {
         console.error('Error:', error);
       });
   }, [movieLoc]);
-
+  console.log('check nowshao', movieLoc);
   // Convert movie object to array for easier filtering
   const movies = Object.entries(movie).map(([key, value]) => ({ key, ...value }));
 
@@ -82,6 +82,7 @@ function Upcoming(props) {
                   movieDir: mov.dir,
                   movieLang: mov.lang,
                   movieUrl: mov.url,
+                  movieLoc:movieLoc,
                 }}
               >
                 <img
@@ -99,9 +100,9 @@ function Upcoming(props) {
               <Link
                 to={userName ? "/Theatredetails" : "/Signin"}
                 state={
-                  userName
-                    ? { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName,movUrl:mov.url, }
-                    : {}
+                  
+                    { movName: mov.name, movGenre: mov.genre, movLang: mov.lang, userName: userName,movUrl:mov.url, movieLoc:movieLoc, }
+                    
                 }
               >
                 <button className="book">Book Ticket</button>

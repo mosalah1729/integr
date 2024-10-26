@@ -141,6 +141,8 @@ def addbooking(request):
     thr = Theatre.objects.get(name=theater)
     print("thr")
     print(thr)
+    print("strt")
+    print(start_time)
     show = Showtime.objects.get(movie=mov, screen=scr, theatre=thr, start_time=start_time)
     print("show")
     print(show)

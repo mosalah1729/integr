@@ -33,6 +33,7 @@ axios.defaults.headers.common['X-CSRFToken'] = csrfToken;
 
 function Theatre(props) {
 
+  const {movieLocation}=props
   
   // const { movName } = props.location.state;
   // const { params } = props.match;
@@ -55,19 +56,20 @@ function Theatre(props) {
   const movieGenre = location.state?.movGenre;
   const movieLang = location.state?.movLang;
   const userName = location.state?.userName;
-  // const movieLocation = location.state?.selectedOption;
-
+  const movieLoc = location.state?.movieLoc;
+  console.log('location', movieLoc);
+  
 
   
   React.useEffect(() => {
     console.log('location from', location);
     console.log('movie name:', movieName);
     console.log('movie genre:', movieGenre);
-  }, [location, movieName]);
+  }, [movieLoc, movieName]);
 
   const [dates, setDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState('');
-  const movieLoc="mananthavady"
+  // const movieLoc="mananthavady"
   
   useEffect(() => {
     const today = new Date();

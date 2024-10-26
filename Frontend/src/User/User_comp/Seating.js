@@ -107,7 +107,7 @@ return (
                   state={{  movieName : movieName,selectedDate: selectedDate,movieLang : movieLang,startTime: new Date(showtime.start_time).toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
                   screen: showtime.screen,capacity: showtime.capacity,theater:theater.name,userName:userName,}}>
   <div className='Seating_a' style={{width: 'fit-content'}}>
-    <span className='a_span'>{new Date(showtime.start_time).toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true})}, {showtime.screen},{showtime.capacity}</span>
+    <span className='a_span'>{new Date(showtime.start_time).toLocaleTimeString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true})}, {showtime.screen}</span>
   </div>
 </Link>
 

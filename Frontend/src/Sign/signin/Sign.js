@@ -34,8 +34,12 @@ function Sign(props) {
       .then((response) => {
         setResponse(response.data.status);
         console.log('return msg', response.data.status);
+        if (response.data.status !== "Invalid credentials!") {
         window.location.href = `/?response=${response.data.status}`;
-      })
+      } else {
+        // Optionally handle the case where credentials are invalid (e.g., show an error message)
+        console.error('Invalid credentials!');
+      }})
       .catch((error) => console.error(error));
   };
 

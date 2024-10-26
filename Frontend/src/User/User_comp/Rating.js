@@ -49,6 +49,7 @@ function Rating(props) {
   const movieLang = location.state?.movieLang;
   const movieUrl = location.state?.movieUrl;
   const userName = location.state?.userName;
+  const movieLoc = location.state?.movieLoc;
   
   console.log("ratingilethi",userName)
 
@@ -95,7 +96,7 @@ return (
      {/* <Link to='/Theatredetails'> <button className=''><b>Book Ticket</b></button></Link> */}
      <Link
               to="/Theatredetails"
-                state={{  movName : movieName,movGenre: movieGenre,movLang: movieLang,userName:userName}}>
+                state={{  movName : movieName,movGenre: movieGenre,movLang: movieLang,userName:userName,movieLoc:movieLoc,}}>
           <button className='rate_button'><b>Book Ticket</b></button></Link>
      </div>
     </div> 
@@ -106,12 +107,12 @@ return (
 position: 'absolute',
 width: '60px',
 height: '60px',
-backgroundColor: '#FF640D',
+backgroundColor: '#4ad0ef',
 borderRadius: '16px',
 display: 'flex',
 justifyContent: 'center',
 alignItems: 'center',
-color: '#FFFFFF',
+color: '#000000',
 
 fontWeight: 'bold',
 fontSize: '24px'
@@ -125,43 +126,50 @@ fontSize: '24px'
      </div>
 
      <div style={{
-
-fontSize: '18px',
-fontWeight: 'bold',
-
-
-
+  fontSize: '19px',
+  fontWeight: 'bold',
+  lineHeight: '.8'  // Adjusts line spacing
 }}>
-     <h1 >{movieName}</h1>
-      <b>Genre:</b>{movieGenre}
-    {/* <p><h3>Director:</h3><span>{movieDir}</span></p> */}
-    <p><b >Director:</b>{movieDir}</p>
-    <p><b >Language:</b>{movieLang}</p>
+  <h1>{movieName}</h1>
+  <p><b>Genre:</b> {movieGenre}</p>
+  <p><b>Director:</b> {movieDir}</p>
+  <p><b>Language:</b> {movieLang}</p>
+</div>
 
 
-  </div>
   <div className='rate_score' style={{
 position: 'relative',
-top: '-100px',
+top: '-134px',
 left: '0px'
 }}>
 <h1>your score:  </h1>
 <input type="text" style={{
-borderRadius: '8px'
+  borderRadius: '8px',
+  width: '96px',
+  backgroundColor: 'rgb(220 234 240)',
+  border: '1px solid #ccc',  // Ensures a visible border
+  outline: 'none',           // Removes the default blue outline on focus
+  padding: '8px',            // Adds padding inside the input
 }} />
+
 <div>
 <button style={{
-backgroundColor: '#FF640D',
-color: '#FFFFFF',
-position: 'relative',
-top: '10px',
-left: '0px',
-fontSize: '18px',
-fontWeight: 'bold',
-borderRadius: '8px',
-padding: '8px 16px',
-border: 'none'
-}}>submit</button>
+  backgroundColor: '#4ad0ef',
+  color: '#000000',
+  position: 'relative',
+  top: '10px',
+  width: '115px',
+  height: '39px',
+  left: '0px',
+  fontSize: '20px',
+  fontWeight: 'bold',
+  borderRadius: '8px',
+  padding: '8px 16px',
+  border: 'none'
+}}>
+  Submit
+</button>
+
 </div>
 
 </div>
@@ -175,7 +183,7 @@ left: '0px'
       <h1>Synopsis</h1>
       <div style={{
 
-fontSize: '25px',
+fontSize: '20px',
 fontWeight: 'bold',
 
 
@@ -184,7 +192,7 @@ fontWeight: 'bold',
     </div>
     <div   className='rate_score1'  style={{
 position: 'relative',
-top: '-200px',
+top: '-220px',
 left: '0px'
 }}>
       <h1>User ratings</h1>
@@ -192,18 +200,22 @@ left: '0px'
       <Link
               to="/Userreview"
                 state={{  movieName : movieName,userName: userName,}}>
-        <div><button className='rate_rev'style={{
-backgroundColor: '#FF640D',
-color: '#FFFFFF',
-position: 'relative',
-top: '30px',
-left: '-207px',
-fontSize: '18px',
-fontWeight: 'bold',
-borderRadius: '8px',
-padding: '8px 16px',
-border: 'none'
-}}>Click here </button></div>
+        <div><button className='rate_rev' style={{
+  backgroundColor: '#4ad0ef',
+  color: '#000000',
+  position: 'relative',
+  top: '53px',
+  left: '-220px',
+  height: '40px',
+  fontSize: '18px',
+  fontWeight: 'bold',
+  borderRadius: '8px',
+  padding: '8px 16px',
+  border: 'none'
+}}>
+  Click here
+</button>
+</div>
       
       </Link>
     </div>
