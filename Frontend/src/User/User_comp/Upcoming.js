@@ -335,7 +335,17 @@ function Nowshowing(props) {
                     : {}
                 }
               >
-                <button className="book">Book Ticket</button>
+                <button className="book" disabled style={{
+  backgroundColor: '#ccc',  // Gray background
+  color: '#666',            // Dimmed text color
+  cursor: 'not-allowed',    // Changes cursor to indicate it's unclickable
+  borderBottomLeftRadius: '20px',
+  borderBottomRightRadius: '20px'
+}}>
+  Coming Soon
+</button>
+
+
               </Link>
             </div>
           </div>

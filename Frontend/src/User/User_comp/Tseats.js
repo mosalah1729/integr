@@ -205,9 +205,46 @@ function Seating(props) {
           ))}
         </div>
         {selectedCount > 0 && (
-          <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, backgroundColor: 'white', padding: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <p style={{ marginRight: '10px' }}>{selectedCount} seat{selectedCount > 1 ? 's' : ''} selected: {selectedSeats.join(', ')}</p>
-            <button onClick={handlePayment}>Pay Rs.{totalPrice}</button>
+          <div style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            backgroundColor: 'white',
+            padding: '20px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+            <p style={{
+              fontSize: '16px', /* Font size for text */
+              marginRight: '10px' /* Margin for spacing */
+            }}><b>
+              {selectedCount} seat{selectedCount > 1 ? 's' : ''} selected: {selectedSeats.join(', ')}
+              </b></p>
+            <button 
+              style={{
+                backgroundColor: '#4ad0ef', /* Button color */
+                color: 'white', /* Text color */
+                border: 'none', /* Remove default border */
+                borderRadius: '17px', /* Increased border radius */
+                padding: '15px 30px', /* Increased padding for a bigger button */
+                fontSize: '18px', /* Increased font size */
+                cursor: 'pointer', /* Pointer on hover */
+                transition: 'transform 0.2s, box-shadow 0.2s' /* Smooth transition */
+              }} 
+              onMouseOver={e => {
+                e.currentTarget.style.transform = 'scale(1.05)'; /* Slightly increase size on hover */
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)'; /* Enhanced shadow effect on hover */
+              }} 
+              onMouseOut={e => {
+                e.currentTarget.style.transform = 'scale(1)'; /* Reset size when not hovering */
+                e.currentTarget.style.boxShadow = 'none'; /* Remove shadow when not hovering */
+              }}
+              onClick={handlePayment}
+            >
+              <b>Pay Rs.{totalPrice}</b>
+            </button>
           </div>
         )}
   

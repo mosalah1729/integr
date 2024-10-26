@@ -97,7 +97,7 @@ def signup(request):
                 user=User.objects.create_user(username=email,password=password1)
                 user.save();
                 print("user created")
-                response_data = {'status': f' user created!'}
+                response_data = {'status': f'user created!'}
                 return JsonResponse(response_data)
         else : 
             response_data = {'status': f' password not matching!'}

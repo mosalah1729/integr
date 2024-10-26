@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/static/css/main.d52e039a.css",
-    "main.js": "/static/static/js/main.134ce7d3.js",
+    "main.css": "/static/static/css/main.8c3341db.css",
+    "main.js": "/static/static/js/main.0d9be4f8.js",
     "static/js/453.0f10a1a4.chunk.js": "/static/static/js/453.0f10a1a4.chunk.js",
     "static/media/new-batman-poster-1634314278488_aab8.jpg": "/static/static/media/new-batman-poster-1634314278488_aab8.e3cabfeb878ee0f3ad39.jpg",
     "static/media/spiderverse.jpg": "/static/static/media/spiderverse.30c4295ba9c2aed364e5.jpg",
@@ -16,12 +16,12 @@
     "static/media/sp.jpeg": "/static/static/media/sp.2848c21cdc3c6694fd46.jpeg",
     "static/media/jw4.jpeg": "/static/static/media/jw4.b9a07d3419c10c568f14.jpeg",
     "index.html": "/static/index.html",
-    "main.d52e039a.css.map": "/static/static/css/main.d52e039a.css.map",
-    "main.134ce7d3.js.map": "/static/static/js/main.134ce7d3.js.map",
+    "main.8c3341db.css.map": "/static/static/css/main.8c3341db.css.map",
+    "main.0d9be4f8.js.map": "/static/static/js/main.0d9be4f8.js.map",
     "453.0f10a1a4.chunk.js.map": "/static/static/js/453.0f10a1a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d52e039a.css",
-    "static/js/main.134ce7d3.js"
+    "static/css/main.8c3341db.css",
+    "static/js/main.0d9be4f8.js"
   ]
 }

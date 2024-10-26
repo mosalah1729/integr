@@ -100,33 +100,34 @@ function Banner(props) {
           Telugu
         </label>
 
-        <div className='genres'>
+                <div className='genres'>
           <h1 style={{ marginLeft: '21px' }}>Genres</h1>
           <label>
-            <input type="checkbox" name="genre" value="horror" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Horror" onChange={handleGenreChange} />
             Horror
           </label>
           <label>
-            <input type="checkbox" name="genre" value="action" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Action" onChange={handleGenreChange} />
             Action
           </label>
           <label>
-            <input type="checkbox" name="genre" value="animation" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Animation" onChange={handleGenreChange} />
             Animation
           </label>
           <label>
-            <input type="checkbox" name="genre" value="adventure" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Adventure" onChange={handleGenreChange} />
             Adventure
           </label>
           <label>
-            <input type="checkbox" name="genre" value="thriller" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Thriller" onChange={handleGenreChange} />
             Thriller
           </label>
           <label>
-            <input type="checkbox" name="genre" value="thriller" onChange={handleGenreChange} />
+            <input type="checkbox" name="genre" value="Comedy" onChange={handleGenreChange} />
             Comedy
           </label>
         </div>
+
       </div>
 
       <div className='movies'>
