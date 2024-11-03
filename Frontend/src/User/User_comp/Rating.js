@@ -95,7 +95,7 @@ return (
      <div style={{marginTop:'485px',marginLeft:'-331px'}}>
      {/* <Link to='/Theatredetails'> <button className=''><b>Book Ticket</b></button></Link> */}
      <Link
-              to="/Theatredetails"
+              to={userName ? "/Theatredetails" : "/Signin"}
                 state={{  movName : movieName,movGenre: movieGenre,movLang: movieLang,userName:userName,movieLoc:movieLoc,}}>
           <button className='rate_button'><b>Book Ticket</b></button></Link>
      </div>
