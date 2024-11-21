@@ -1,15 +1,15 @@
-.head
-{
+/* Default desktop styles (unchanged) */
+.head {
     background: #1c1c1c;
     width: 100%;
     height: 100px;
 }
-.search{
+/* .search {
     padding: 30px;
     padding-left: 270px;
     width: 1300px;
-}
-.input_search{
+} */
+.input_search {
     align-items: center;
     background: #3d3d3d;
     border: 2px;
@@ -21,37 +21,30 @@
     height: 50px;
     outline: none;
     width: 547px;
-    /* float: left; */
     margin-left: 182px;
     margin-top: 22px;
 }
-.button
-{
+.button {
     border-radius: 50%;
     border: none;
     cursor: pointer;
     margin-left: -35px;
     background: transparent;
 }
-.image
-{
+.image {
     margin-top: 3px;
     height: 18px;
 }
-::placeholder
-{
-    color:rgba(77, 66, 66, 0.648);
+::placeholder {
+    color: rgba(77, 66, 66, 0.648);
     font-size: larger;
     margin-left: 20px;
 }
-.main
-{
+.main {
     background: linear-gradient(#f85d04,#fe6913,#fc782c);
     display: flex;
-
 }
-.sign
-{
+.sign {
     height: 37px;
     width: 75px;
     position: absolute;
@@ -64,12 +57,19 @@
     font-size: 15px;
     color: black;
 }
+.sign, .random {
+    width: 60px; /* Smaller buttons */
+    height: 30px;
+    font-size: 12px; /* Adjust font size */
+    
+    position: absolute; /* Position relative to .head_search */
+    left: 90rem;
+    top: 50px;
+}
 .sign:hover {
     background-color: #bcfcff;
-    
-  }
-.random
-{
+}
+.random {
     height: 37px;
     width: 70px;
     position: absolute;
@@ -84,22 +84,110 @@
 }
 .user-info {
     display: inline-block;
-  }
-  
-  /* .user-info span {
-    display: inline-block;
-    margin-right: 10px;
-  } */
-  
-  .greet{
+}
+.greet {
     top: 34px;
     right: 62px;
     color: aliceblue;
-  }
-  .head_main {
-    display: flex; /* Use flexbox for horizontal alignment */
-    
 }
-.buttons:hover {
-    background-color: #bcfcff;
-  }
+.head_main {
+    display: flex; /* Use flexbox for horizontal alignment */
+}
+
+/* Add responsiveness for smartphones */
+@media (max-width: 300px) {
+    .head {
+        height: auto; /* Adjust height for small screens */
+        padding: 10px;
+        width: 200vw; /* Set width to the viewport width */
+    }
+    .head_search {
+        position: relative; /* Ensures child elements can be positioned relative to this */
+    }
+
+    .search {
+        padding: 10px;
+        padding-left: 10px;
+        width: 100%; /* Full width on mobile */
+    }
+
+    .input_search {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust margin */
+        font-size: 14px; /* Slightly smaller font */
+        margin-left: 194px;
+    margin-top: 22px;
+    }
+
+    .button {
+        position: absolute; /* Makes the button's position relative to .head_search */
+        left: 44.5em; /* 30em from the left of .head_search */
+        top: 35%; /* Center the button vertically within .head_search */
+        transform: translateY(-50%); /* Adjusts for centering */
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .sign, .random {
+        width: 60px; /* Smaller buttons */
+        height: 30px;
+        font-size: 12px; /* Adjust font size */
+        
+        position: absolute; /* Position relative to .head_search */
+        right: 0vw;
+        top: 50px;
+    }
+
+    .main {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .user-info {
+        text-align: center; /* Center-align user info */
+    }
+
+    .greet {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+@media (max-width: 1270px) {
+    .head {
+        height: 100px; /* Adjust height for small screens */
+        padding: 10px;
+        width: 100em; /* Set width to the viewport width */
+    }
+    .head_search {
+        /* width: 40vw; */
+        position: relative;  /* Ensures child elements can be positioned relative to this */
+    }
+    .input_search {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust margin */
+        font-size: 14px; /* Slightly smaller font */
+        margin-left: 194px;
+    margin-top: 22px;
+    }
+
+    .button {
+        position: absolute;
+        left: 44.5em;
+        top: 35%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    .sign, .random {
+        width: 60px; /* Smaller buttons */
+        height: 30px;
+        font-size: 12px; /* Adjust font size */
+        
+        position: absolute; /* Position relative to .head_search */
+        left: 90rem;
+        top: 50px;
+    }
+}
