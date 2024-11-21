@@ -1,29 +1,33 @@
 /* Default desktop styles (unchanged) */
 .head {
+    
+}.head_main {
+    display: flex;
     background: #1c1c1c;
-    width: 100%;
-    height: 100px;
+    /* width: 320rem; */
+    height: 100px; /* Use flexbox for horizontal alignment */
 }
+
 /* .search {
     padding: 30px;
     padding-left: 270px;
     width: 1300px;
 } */
-.input_search {
-    align-items: center;
-    background: #3d3d3d;
-    border: 2px;
-    border-color: #fff;
-    border-radius: 7px;
-    color: rgba(77,66,66,.648);
-    cursor: pointer;
-    font-size: 15px;
-    height: 50px;
-    outline: none;
-    width: 547px;
-    margin-left: 182px;
-    margin-top: 22px;
-}
+    .input_search {
+        align-items: center;
+        background: #3d3d3d;
+        border: 2px;
+        border-color: #fff;
+        border-radius: 7px;
+        color: rgba(77,66,66,.648);
+        cursor: pointer;
+        font-size: 15px;
+        height: 50px;
+        outline: none;
+        width: 547px;
+        margin-left: 182px;
+        margin-top: 22px;
+    }
 .button {
     border-radius: 50%;
     border: none;
@@ -52,28 +56,16 @@
     cursor: pointer;
     background: #4ad0ef;
     border-radius: 10px;
-    top: 35px;
+    top: -7px;
     border-color: #000000;
     font-size: 15px;
     color: black;
-}
-.sign, .random {
-    width: 60px; /* Smaller buttons */
-    height: 30px;
-    font-size: 12px; /* Adjust font size */
-    
-    position: absolute; /* Position relative to .head_search */
-    left: 90rem;
-    top: 50px;
-}
-.sign:hover {
-    background-color: #bcfcff;
 }
 .random {
     height: 37px;
     width: 70px;
     position: absolute;
-    top: 34px;
+    top: -7px;
     right: 62px;
     cursor: pointer;
     background: #4ad0ef;
@@ -82,6 +74,32 @@
     font-size: 15px;
     color: black;
 }
+.greet{
+    margin-right: 11em;
+}
+.sign, .random {
+   
+    
+    
+}
+.user-info {
+    position: absolute; /* Position relative to .head_search */
+    right: 9rem; /* Adjust position from the right edge of .head_search */
+    top: 46px; /* Align vertically */
+    display: flex; /* Enable Flexbox for horizontal alignment */
+    align-items: center; /* Vertically align items */
+    gap: 1rem; /* Add spacing between items */
+}
+
+.greet {
+    font-size: 20px; /* Adjust font size */
+    position: static; /* Allow natural positioning within Flexbox */
+    color: aliceblue;
+}
+.sign:hover {
+    background-color: #bcfcff;
+}
+
 .user-info {
     display: inline-block;
 }
@@ -90,70 +108,19 @@
     right: 62px;
     color: aliceblue;
 }
-.head_main {
-    display: flex; /* Use flexbox for horizontal alignment */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: absolute;
+    right: 5rem;
+    top: 46px;
 }
 
 /* Add responsiveness for smartphones */
-@media (max-width: 300px) {
-    .head {
-        height: auto; /* Adjust height for small screens */
-        padding: 10px;
-        width: 200vw; /* Set width to the viewport width */
-    }
-    .head_search {
-        position: relative; /* Ensures child elements can be positioned relative to this */
-    }
 
-    .search {
-        padding: 10px;
-        padding-left: 10px;
-        width: 100%; /* Full width on mobile */
-    }
-
-    .input_search {
-        width: 100%; /* Full width */
-        margin: 10px 0; /* Adjust margin */
-        font-size: 14px; /* Slightly smaller font */
-        margin-left: 194px;
-    margin-top: 22px;
-    }
-
-    .button {
-        position: absolute; /* Makes the button's position relative to .head_search */
-        left: 44.5em; /* 30em from the left of .head_search */
-        top: 35%; /* Center the button vertically within .head_search */
-        transform: translateY(-50%); /* Adjusts for centering */
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        background: transparent;
-    }
-
-    .sign, .random {
-        width: 60px; /* Smaller buttons */
-        height: 30px;
-        font-size: 12px; /* Adjust font size */
-        
-        position: absolute; /* Position relative to .head_search */
-        right: 0vw;
-        top: 50px;
-    }
-
-    .main {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align content */
-    }
-
-    .user-info {
-        text-align: center; /* Center-align user info */
-    }
-
-    .greet {
-        font-size: 14px; /* Adjust font size */
-    }
-}
-@media (max-width: 1270px) {
+@media (max-width: 1589px) {
     .head {
         height: 100px; /* Adjust height for small screens */
         padding: 10px;
@@ -161,7 +128,8 @@
     }
     .head_search {
         /* width: 40vw; */
-        position: relative;  /* Ensures child elements can be positioned relative to this */
+        position: relative; 
+        right: 11em; /* Ensures child elements can be positioned relative to this */
     }
     .input_search {
         width: 100%; /* Full width */
@@ -170,7 +138,39 @@
         margin-left: 194px;
     margin-top: 22px;
     }
-
+    .sign {
+        height: 37px;
+        width: 75px;
+        position: absolute;
+        right: 150px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        top: -7px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .random {
+        height: 37px;
+        width: 70px;
+        position: absolute;
+        top: -7px;
+        right: 62px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .greet{
+        margin-right: 11em;
+    }
+    .image {
+        margin-top: 23px;
+        height: 18px;
+    }
     .button {
         position: absolute;
         left: 44.5em;
@@ -181,13 +181,236 @@
         cursor: pointer;
         background: transparent;
     }
-    .sign, .random {
-        width: 60px; /* Smaller buttons */
-        height: 30px;
-        font-size: 12px; /* Adjust font size */
-        
+    .user-info {
         position: absolute; /* Position relative to .head_search */
-        left: 90rem;
-        top: 50px;
+        right: -16rem; /* Adjust position from the right edge of .head_search */
+        top: 46px; /* Align vertically */
+        display: flex; /* Enable Flexbox for horizontal alignment */
+        align-items: center; /* Vertically align items */
+        gap: 1rem; /* Add spacing between items */
+    }
+}
+/* .sign, .random {
+    width: 60px; 
+    height: 30px;
+    font-size: 12px; 
+    
+    position: absolute;
+    left: 90rem;
+    top: 50px;
+} */
+@media (max-width: 1160px) {
+    .head {
+        height: 100px; /* Adjust height for small screens */
+        padding: 10px;
+        width: 100em; /* Set width to the viewport width */
+    }
+    .head_search {
+        /* width: 9em; */
+        position: relative; 
+        right: 11em; /* Ensures child elements can be positioned relative to this */
+    }
+    .input_search {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust margin */
+        font-size: 14px; /* Slightly smaller font */
+        margin-left: 194px;
+    margin-top: 22px;
+    }
+    .sign {
+        height: 37px;
+        width: 75px;
+        position: absolute;
+        right: 150px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        top: -7px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .random {
+        height: 37px;
+        width: 70px;
+        position: absolute;
+        top: -7px;
+        right: 62px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .greet{
+        margin-right: 11em;
+    }
+    .image {
+        margin-top: 23px;
+        height: 18px;
+    }
+    .button {
+        position: absolute;
+        left: 44.5em;
+        top: 35%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    .user-info {
+        position: absolute; /* Position relative to .head_search */
+        right: -33rem; /* Adjust position from the right edge of .head_search */
+        top: 46px; /* Align vertically */
+        display: flex; /* Enable Flexbox for horizontal alignment */
+        align-items: center; /* Vertically align items */
+        gap: 1rem; /* Add spacing between items */
+    }
+}
+@media (max-width: 930px) {
+    .head {
+        height: 100px; /* Adjust height for small screens */
+        padding: 10px;
+        width: 100em; /* Set width to the viewport width */
+    }
+    .head_search {
+        /* width: 9em; */
+        position: relative; 
+        right: 11em; 
+        
+    }
+    .input_search {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust margin */
+        font-size: 14px; /* Slightly smaller font */
+        margin-left: 194px;
+    margin-top: 22px;
+    
+    
+    }
+    .sign {
+        height: 37px;
+        width: 75px;
+        position: absolute;
+        right: 150px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        top: -7px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .random {
+        height: 37px;
+        width: 70px;
+        position: absolute;
+        top: -7px;
+        right: 62px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .greet{
+        margin-right: 11em;
+    }
+    .image {
+        margin-top: 23px;
+        height: 18px;
+        
+    }
+    .button {
+        position: absolute;
+        left: 44.5em;
+        top: 35%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        /* display: none */
+    }
+    .user-info {
+        position: absolute; /* Position relative to .head_search */
+        right: -41rem; /* Adjust position from the right edge of .head_search */
+        top: 46px; /* Align vertically */
+        display: flex; /* Enable Flexbox for horizontal alignment */
+        align-items: center; /* Vertically align items */
+        gap: 1rem; /* Add spacing between items */
+    }
+}
+@media (max-width: 700px) {
+    .head {
+        height: 100px; /* Adjust height for small screens */
+        padding: 10px;
+        width: 100em; /* Set width to the viewport width */
+    }
+    .head_search {
+        /* width: 100%;     */
+        position: relative; 
+        right: 11em; /* Ensures child elements can be positioned relative to this */
+    }
+    .input_search {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Adjust margin */
+        font-size: 14px; /* Slightly smaller font */
+        margin-left: 194px;
+    margin-top: 22px;
+    }
+    .sign {
+        height: 37px;
+        width: 75px;
+        position: absolute;
+        right: 150px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        top: -7px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .random {
+        height: 37px;
+        width: 70px;
+        position: absolute;
+        top: -7px;
+        right: 62px;
+        cursor: pointer;
+        background: #4ad0ef;
+        border-radius: 10px;
+        border-color: #000000;
+        font-size: 15px;
+        color: black;
+    }
+    .greet{
+        margin-right: 11em;
+    }
+    .image {
+        margin-top: 23px;
+        height: 18px;
+    }
+    .button {
+        position: absolute;
+        left: 44.5em;
+        top: 35%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    .user-info {
+        position: absolute; /* Position relative to .head_search */
+        right: -56rem; /* Adjust position from the right edge of .head_search */
+        top: 46px; /* Align vertically */
+        display: flex; /* Enable Flexbox for horizontal alignment */
+        align-items: center; /* Vertically align items */
+        gap: 1rem; /* Add spacing between items */
     }
 }
