@@ -7,7 +7,7 @@
 }
 .thea_movie {
     display: flex;
-    width: 100%;
+    width: 500em;
     height: 400px;
     background-size: contain;
     /* opacity: 0.8; */

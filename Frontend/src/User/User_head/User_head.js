@@ -108,16 +108,15 @@ function User_head(props) {
       </div>
       
       {userName ? (
-        <div className="user-info">
-          <span className='greet' style={{ position: 'absolute', left: '1231px', top: '46px', fontSize: '20px' }}>Hi, {userName}</span>
-           <Link to="/random">
-            <button className="random">Ratings</button>
-          </Link>
-          <button className="sign" onClick={handleSignOut}>Sign Out</button>
-          
-        </div>
+        <div className="user-info" >
+        <span className="greet" style={{ fontSize: '20px', color: 'aliceblue' }}>Hi, {userName}</span>
+        <Link to="/random">
+            <button className="random" style={{ margin: 0 }}>Ratings</button>
+        </Link>
+        <button className="sign" onClick={handleSignOut} style={{ margin: 0 }}>Sign Out</button>
+    </div>
       ) : (
-        <div>
+        <div className="user-info">
           
           <Link to="/Signin">
             <button className="sign">Sign In</button>
