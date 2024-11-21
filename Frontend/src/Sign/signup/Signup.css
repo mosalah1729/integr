@@ -11,8 +11,8 @@
 .sub-mains {
   display: flex;
   justify-content: center;
-  height: 450px;
-  width: 35%;
+  height: 28em;
+  width: 35em;
   box-shadow: 11px 12px 13px 12px #f3eded;
   padding-top: 30px;
   border-radius: 60px;
@@ -26,7 +26,7 @@
   border-style: solid;
 } 
 input{
-  width: 20rem;
+  width: 15em;
   height: 40px;
   border: none;
   outline: none;
@@ -74,4 +74,51 @@ background: #bcfcff;
 }
 a{
  color: black;
+}
+@media (max-width: 1050px){
+  .sub-main {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; /* Stack elements vertically */
+      height: 28em;
+      width: 35em;
+      box-shadow: 11px 12px 13px 12px #f3eded;
+      padding-top: 30px;
+      border-radius: 60px;
+      background-color: #3d3d3d;
+  }
+}
+@media (max-width: 700px){
+  .sub-main {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; /* Stack elements vertically */
+      height: 28em;
+      width: 27em;
+      box-shadow: 11px 12px 13px 12px #f3eded;
+      padding-top: 30px;
+      border-radius: 60px;
+      background-color: #3d3d3d;
+  }
+  input{
+    width: 15em;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 10px
+  }
+}
+@media (max-width: 450px){
+  .sub-main {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; /* Stack elements vertically */
+      height: 28em;
+      width: 92vw;
+      box-shadow: 11px 12px 13px 12px #f3eded;
+      padding-top: 30px;
+      border-radius: 60px;
+      background-color: #3d3d3d;
+  }
 }
