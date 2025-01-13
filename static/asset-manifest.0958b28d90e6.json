@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "http://127.0.0.1:8000/static/css/main.001111c2.css",
+    "main.js": "http://127.0.0.1:8000/static/js/main.8245cbf7.js",
+    "static/js/651.c91c5979.chunk.js": "http://127.0.0.1:8000/static/js/651.c91c5979.chunk.js",
+    "static/media/new-batman-poster-1634314278488_aab8.jpg": "http://127.0.0.1:8000/static/media/new-batman-poster-1634314278488_aab8.e3cabfeb878ee0f3ad39.jpg",
+    "static/media/spiderverse.jpg": "http://127.0.0.1:8000/static/media/spiderverse.30c4295ba9c2aed364e5.jpg",
+    "static/media/shazam.jpg": "http://127.0.0.1:8000/static/media/shazam.58dde425a414cb69482f.jpg",
+    "static/media/Jaws.jpeg": "http://127.0.0.1:8000/static/media/Jaws.04f6365bb3cbb54ee5cc.jpeg",
+    "static/media/Avatar.jpg": "http://127.0.0.1:8000/static/media/Avatar.949edf4f68c88035b4b2.jpg",
+    "static/media/avatarcover.jpeg": "http://127.0.0.1:8000/static/media/avatarcover.bc372b603b7658c4a369.jpeg",
+    "static/media/chistopher.jpeg": "http://127.0.0.1:8000/static/media/chistopher.4bcfe52bd3776fc4c62b.jpeg",
+    "static/media/jw.jpeg": "http://127.0.0.1:8000/static/media/jw.07474d5aa5a701c85669.jpeg",
+    "static/media/ed2.jpeg": "http://127.0.0.1:8000/static/media/ed2.4010d9185c6d3ae2138a.jpeg",
+    "static/media/christ.jpeg": "http://127.0.0.1:8000/static/media/christ.7abd14ebe687d5cfa3cf.jpeg",
+    "static/media/shzm.jpeg": "http://127.0.0.1:8000/static/media/shzm.262191dff3bd6991f533.jpeg",
+    "static/media/sp.jpeg": "http://127.0.0.1:8000/static/media/sp.2848c21cdc3c6694fd46.jpeg",
+    "static/media/jw4.jpeg": "http://127.0.0.1:8000/static/media/jw4.b9a07d3419c10c568f14.jpeg",
+    "index.html": "http://127.0.0.1:8000/index.html",
+    "main.001111c2.css.map": "http://127.0.0.1:8000/static/css/main.001111c2.css.map",
+    "main.8245cbf7.js.map": "http://127.0.0.1:8000/static/js/main.8245cbf7.js.map",
+    "651.c91c5979.chunk.js.map": "http://127.0.0.1:8000/static/js/651.c91c5979.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.001111c2.css",
+    "static/js/main.8245cbf7.js"
+  ]
+}

@@ -1,0 +1,77 @@
+
+.main {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  height: 550px;
+  background:#F2F2F2;
+  }
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  width: 35%;
+  box-shadow: 11px 12px 13px 12px #f3eded;
+  padding-top: 30px;
+  border-radius: 60px;
+  background-color: #F3E1DA;
+}
+.profile {
+ height: 100px;
+  width: 100px;
+  border-radius: 130px;
+  border-color: black;
+  border-style: solid;
+} 
+input{
+  width: 15rem;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 10px
+}
+.email{
+margin-top: 63px;
+font-size: 20px;
+margin-left: -40px;
+}
+.pass{
+  margin-top: 25px;
+  font-size: 20px;
+  margin-left: -75px;
+}
+.Pass
+{
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  padding: 14px 0 0 25px;
+  margin-left: -10px;
+  margin-top: -4px;
+}
+.input
+{
+  padding-left: 50px;
+  font-size: 20px;
+}
+.login-button{
+height: 50px;
+width: 100px;
+border-radius: 10px;
+background: #FF8C4B;
+border-style: none;
+font-size: 17px;
+font-weight: bold;
+margin-top: 35px;
+margin-left: 15px;
+cursor: pointer;
+}
+button:hover{
+background: #ffa069;
+}
+a{
+ color: black;
+}
